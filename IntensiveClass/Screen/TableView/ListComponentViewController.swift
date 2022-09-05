@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TableViewController: UIViewController {
+class ListComponentViewController: UIViewController {
 
 	@IBOutlet weak var tableView: UITableView!
 	
@@ -18,7 +18,7 @@ class TableViewController: UIViewController {
 	override func viewDidLoad() {
         super.viewDidLoad()
 		setupTableView()
-		title = "UIKit - Reusable Component"
+		title = "UIKit - List Component"
     }
 	
 
@@ -31,7 +31,7 @@ class TableViewController: UIViewController {
 
 }
 
-extension TableViewController: UITableViewDataSource {
+extension ListComponentViewController: UITableViewDataSource {
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return totalCell
 	}

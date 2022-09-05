@@ -29,7 +29,7 @@ class ListClassViewController: UIViewController {
 	
 	private func generateClassData() {
 		classes.append(ClassModel(dateString: "30 August 2022", title: "UIKit Basic", controller: LandingPageViewController()))
-		classes.append(ClassModel(dateString: "5 September 2022", title: "UIKit TableView", controller: TableViewController()))
+		classes.append(ClassModel(dateString: "5 September 2022", title: "UIKit List Component", controller: ListComponentViewController()))
 	}
 }
 
