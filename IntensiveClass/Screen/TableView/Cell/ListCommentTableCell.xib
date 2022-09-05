@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListCommentTableCell" rowHeight="211" id="KGk-i7-Jjw" customClass="ListCommentTableCell" customModule="IntensiveClass" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="386" height="211"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="386" height="211"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wLh-Ml-47Z">
+                        <rect key="frame" x="16" y="8" width="354" height="195"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pHo-fs-ATo" userLabel="ContainerView">
+                        <rect key="frame" x="16" y="8" width="354" height="195"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_default_avatar" translatesAutoresizingMaskIntoConstraints="NO" id="Fxf-1o-qeg">
+                                <rect key="frame" x="12" y="12" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="6ZW-yC-wCm"/>
+                                    <constraint firstAttribute="width" constant="80" id="u5y-bj-GZK"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Aus-Oe-8h6">
+                                <rect key="frame" x="104" y="12" width="238" height="127"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="252" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kW4-Rl-X6J">
+                                        <rect key="frame" x="0.0" y="0.0" width="238" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wf7-YF-SEO">
+                                        <rect key="frame" x="0.0" y="21.5" width="238" height="17"/>
+                                        <mutableString key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vulputate a eros sed vestibulum. Donec molestie auctor ligula, eget tempor ante dapibus ut. Proin nec augue purus. Sed felis quam, dignissim ac semper non, volutpat quis dolor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris tempor ante et ex interdum suscipit. Duis mattis, justo eu condimentum pellentesque, arcu elit maximus magna, sit amet scelerisque est velit in magna.
+
+Morbi vitae mauris et tortor sodales maximus id vitae metus. Aenean eu nibh id diam fringilla aliquam. Donec sollicitudin, est ac viverra bibendum, ante massa pretium lacus, non egestas augue justo in mi. Mauris volutpat pulvinar metus, ut varius nunc molestie ut. Vestibulum elementum odio vel varius viverra. Suspendisse at semper nisi, eu consectetur sapien. Quisque nec justo a ante fringilla pellentesque.
+
+Aliquam erat volutpat. Suspendisse congue bibendum eros. Vivamus ac lacus aliquet, placerat quam vitae, condimentum nisl. Donec elementum eros sed leo dignissim malesuada. Integer id risus lacus. Suspendisse id tellus pulvinar, faucibus lorem ut, ultricies orci. Phasellus ut hendrerit erat. Quisque orci sapien, feugiat ut malesuada vitae, lacinia sed est. Etiam porta lectus non suscipit aliquet. Proin aliquet, velit vitae molestie aliquam, nisi ipsum tincidunt lacus, sed viverra sem lectus consequat mauris. Donec porttitor vestibulum condimentum. Suspendisse auctor, diam a hendrerit tincidunt, justo metus ultricies felis, vitae dignissim erat elit ut lacus. Quisque molestie felis ut lectus luctus, ut pharetra odio ornare. Proin rutrum, nibh eu faucibus suscipit, magna purus tempor orci, nec tempor sem quam facilisis dolor. Suspendisse potenti.
+
+Curabitur nec commodo dui, a blandit erat. Mauris vitae iaculis est. Ut molestie lorem vitae nunc fringilla auctor nec nec libero. Maecenas vel maximus diam, at tincidunt magna. Aenean mattis dictum elit, eget viverra dui mattis quis. Integer malesuada lectus quis leo semper volutpat. In hac habitasse platea dictumst. In quis lacinia orci. Aenean sit amet lectus massa. Sed nec aliquet felis. Sed eu augue pulvinar, sollicitudin ante vel, lacinia metus. In ac nulla a ipsum vestibulum vehicula. Etiam sit amet iaculis purus. Nulla facilisi. Integer vitae blandit est. Maecenas molestie condimentum est rhoncus dictum.
+
+Donec porttitor aliquet rhoncus. In varius neque sed nisi ultricies, dignissim dignissim tellus imperdiet. Fusce vel pharetra leo, id blandit nulla. Aliquam vehicula turpis sit amet aliquam consequat. In vel nibh elementum, aliquam felis vel, convallis orci. Vestibulum maximus urna quis eros commodo, aliquam egestas sem laoreet. Sed suscipit justo eget massa ultrices luctus. Donec eros ligula, viverra eget erat vel, consequat fermentum nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Fusce id nunc eleifend, bibendum quam ac, pharetra orci. Aliquam at congue turpis, vitae semper nulla. Duis euismod nisi ac dictum aliquam. Curabitur at efficitur quam. Cras nec consectetur elit. Proin tempor pellentesque metus at laoreet.</mutableString>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hVx-4r-495">
+                                        <rect key="frame" x="0.0" y="38.5" width="238" height="70.5"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="8" id="aVs-rI-eVs"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photos:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x7C-Xt-syR">
+                                        <rect key="frame" x="0.0" y="109" width="238" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="IXB-pJ-EIb">
+                                <rect key="frame" x="0.0" y="147" width="354" height="40"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="zPy-A5-u6T"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gPO-sn-pJF">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Aus-Oe-8h6" secondAttribute="trailing" constant="12" id="1Mh-BT-ymT"/>
+                            <constraint firstItem="Aus-Oe-8h6" firstAttribute="height" relation="greaterThanOrEqual" secondItem="Fxf-1o-qeg" secondAttribute="height" id="9bh-0Z-hY4"/>
+                            <constraint firstItem="Fxf-1o-qeg" firstAttribute="leading" secondItem="pHo-fs-ATo" secondAttribute="leading" constant="12" id="Geh-uf-1P7"/>
+                            <constraint firstItem="Fxf-1o-qeg" firstAttribute="top" secondItem="pHo-fs-ATo" secondAttribute="top" constant="12" id="O84-4a-BKt"/>
+                            <constraint firstAttribute="trailing" secondItem="IXB-pJ-EIb" secondAttribute="trailing" id="bEB-Er-hFS"/>
+                            <constraint firstAttribute="bottom" secondItem="IXB-pJ-EIb" secondAttribute="bottom" constant="8" id="cOQ-8L-P6c"/>
+                            <constraint firstItem="IXB-pJ-EIb" firstAttribute="top" secondItem="Aus-Oe-8h6" secondAttribute="bottom" constant="8" id="kno-4B-i3f"/>
+                            <constraint firstItem="Aus-Oe-8h6" firstAttribute="leading" secondItem="Fxf-1o-qeg" secondAttribute="trailing" constant="12" id="w9O-4l-cZ9"/>
+                            <constraint firstItem="IXB-pJ-EIb" firstAttribute="leading" secondItem="pHo-fs-ATo" secondAttribute="leading" id="zDO-SP-8gj"/>
+                            <constraint firstItem="Aus-Oe-8h6" firstAttribute="top" secondItem="Fxf-1o-qeg" secondAttribute="top" id="zni-JY-X3d"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="pHo-fs-ATo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="1sY-5r-P1E"/>
+                    <constraint firstItem="wLh-Ml-47Z" firstAttribute="top" secondItem="pHo-fs-ATo" secondAttribute="top" id="Fej-3H-gxR"/>
+                    <constraint firstItem="pHo-fs-ATo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="PiK-KS-YgB"/>
+                    <constraint firstItem="wLh-Ml-47Z" firstAttribute="bottom" secondItem="pHo-fs-ATo" secondAttribute="bottom" id="YQx-ef-GMZ"/>
+                    <constraint firstItem="wLh-Ml-47Z" firstAttribute="trailing" secondItem="pHo-fs-ATo" secondAttribute="trailing" id="dDl-gj-2sd"/>
+                    <constraint firstAttribute="bottom" secondItem="pHo-fs-ATo" secondAttribute="bottom" constant="8" id="xCb-Kc-9mx"/>
+                    <constraint firstAttribute="trailing" secondItem="pHo-fs-ATo" secondAttribute="trailing" constant="16" id="zct-4X-4fe"/>
+                    <constraint firstItem="wLh-Ml-47Z" firstAttribute="leading" secondItem="pHo-fs-ATo" secondAttribute="leading" id="znQ-9u-yHe"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="avatarView" destination="Fxf-1o-qeg" id="glt-C4-vYv"/>
+                <outlet property="collectionView" destination="IXB-pJ-EIb" id="p6b-jR-RFq"/>
+                <outlet property="commentLabel" destination="wf7-YF-SEO" id="HJw-t8-WIw"/>
+                <outlet property="containerView" destination="pHo-fs-ATo" id="4Ms-RG-tnH"/>
+                <outlet property="shadowView" destination="wLh-Ml-47Z" id="FD6-kv-q2b"/>
+                <outlet property="usernameLabel" destination="kW4-Rl-X6J" id="idL-hm-j9h"/>
+            </connections>
+            <point key="canvasLocation" x="179.71014492753625" y="109.48660714285714"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_default_avatar" width="225" height="225"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
