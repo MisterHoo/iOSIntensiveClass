@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF9C732428C77C4800DE48A0 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9C732228C77C4800DE48A0 /* PhotoCollectionViewCell.swift */; };
+		AF9C732528C77C4800DE48A0 /* PhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF9C732328C77C4800DE48A0 /* PhotoCollectionViewCell.xib */; };
+		AFA39B5328C5F53300A2FD5F /* ListComponentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA39B5128C5F53300A2FD5F /* ListComponentViewController.swift */; };
+		AFA39B5428C5F53300A2FD5F /* ListComponentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFA39B5228C5F53300A2FD5F /* ListComponentViewController.xib */; };
+		AFA39B6028C5FB8200A2FD5F /* ContentComponentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA39B5E28C5FB8200A2FD5F /* ContentComponentTableViewCell.swift */; };
+		AFA39B6128C5FB8200A2FD5F /* ContentComponentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFA39B5F28C5FB8200A2FD5F /* ContentComponentTableViewCell.xib */; };
 		DB65F28A28BDFF3400218041 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB65F28928BDFF3400218041 /* AppDelegate.swift */; };
 		DB65F29328BDFF3700218041 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB65F29228BDFF3700218041 /* Assets.xcassets */; };
 		DB65F29628BDFF3700218041 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB65F29428BDFF3700218041 /* LaunchScreen.storyboard */; };
@@ -21,6 +27,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF9C732228C77C4800DE48A0 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		AF9C732328C77C4800DE48A0 /* PhotoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCollectionViewCell.xib; sourceTree = "<group>"; };
+		AFA39B5128C5F53300A2FD5F /* ListComponentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListComponentViewController.swift; sourceTree = "<group>"; };
+		AFA39B5228C5F53300A2FD5F /* ListComponentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListComponentViewController.xib; sourceTree = "<group>"; };
+		AFA39B5E28C5FB8200A2FD5F /* ContentComponentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentComponentTableViewCell.swift; sourceTree = "<group>"; };
+		AFA39B5F28C5FB8200A2FD5F /* ContentComponentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentComponentTableViewCell.xib; sourceTree = "<group>"; };
 		DB65F28628BDFF3400218041 /* IntensiveClass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntensiveClass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB65F28928BDFF3400218041 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB65F29228BDFF3700218041 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -47,6 +59,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF9C732128C77BC500DE48A0 /* PhotoCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				AF9C732228C77C4800DE48A0 /* PhotoCollectionViewCell.swift */,
+				AF9C732328C77C4800DE48A0 /* PhotoCollectionViewCell.xib */,
+			);
+			path = PhotoCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		AFA39B5028C5F41400A2FD5F /* ListComponentClass */ = {
+			isa = PBXGroup;
+			children = (
+				AFA39B5528C5F7C100A2FD5F /* ContentComponentClass */,
+				AFA39B5128C5F53300A2FD5F /* ListComponentViewController.swift */,
+				AFA39B5228C5F53300A2FD5F /* ListComponentViewController.xib */,
+			);
+			path = ListComponentClass;
+			sourceTree = "<group>";
+		};
+		AFA39B5528C5F7C100A2FD5F /* ContentComponentClass */ = {
+			isa = PBXGroup;
+			children = (
+				AF9C732128C77BC500DE48A0 /* PhotoCollectionViewCell */,
+				AFA39B5E28C5FB8200A2FD5F /* ContentComponentTableViewCell.swift */,
+				AFA39B5F28C5FB8200A2FD5F /* ContentComponentTableViewCell.xib */,
+			);
+			path = ContentComponentClass;
+			sourceTree = "<group>";
+		};
 		DB65F27D28BDFF3400218041 = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +121,7 @@
 		DB65F29D28BE000600218041 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				AFA39B5028C5F41400A2FD5F /* ListComponentClass */,
 				DBB7E44528C5C1C50085CEDA /* ListClass */,
 				DB65F29E28BE001400218041 /* LandingPage */,
 			);
@@ -188,9 +230,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFA39B6128C5FB8200A2FD5F /* ContentComponentTableViewCell.xib in Resources */,
+				AFA39B5428C5F53300A2FD5F /* ListComponentViewController.xib in Resources */,
 				DBB7E44928C5C1EA0085CEDA /* ListClassViewController.xib in Resources */,
 				DB6ABA1628BE10A900FB7729 /* LabelAndCounterViewController.xib in Resources */,
 				DB65F2A228BE006200218041 /* LandingPageViewController.xib in Resources */,
+				AF9C732528C77C4800DE48A0 /* PhotoCollectionViewCell.xib in Resources */,
 				DB65F29628BDFF3700218041 /* LaunchScreen.storyboard in Resources */,
 				DB65F29328BDFF3700218041 /* Assets.xcassets in Resources */,
 			);
@@ -203,12 +248,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFA39B5328C5F53300A2FD5F /* ListComponentViewController.swift in Sources */,
 				DB6ABA1528BE10A900FB7729 /* LabelAndCounterViewController.swift in Sources */,
 				DBA5915228BE1502008F7500 /* ProjectBaseUIView.swift in Sources */,
 				DB65F28A28BDFF3400218041 /* AppDelegate.swift in Sources */,
 				DB6ABA1028BE105C00FB7729 /* UIView.swift in Sources */,
+				AF9C732428C77C4800DE48A0 /* PhotoCollectionViewCell.swift in Sources */,
 				DB65F2A128BE006200218041 /* LandingPageViewController.swift in Sources */,
 				DBB7E44828C5C1EA0085CEDA /* ListClassViewController.swift in Sources */,
+				AFA39B6028C5FB8200A2FD5F /* ContentComponentTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
