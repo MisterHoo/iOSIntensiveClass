@@ -20,12 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	private func setupInitialScreen() {
 		let initialVC = ListClassViewController()
 		let navVC = UINavigationController(rootViewController: initialVC)
-		navVC.navigationBar.barTintColor = .blue
-		navVC.navigationBar.backgroundColor = .blue
-		navVC.navigationBar.titleTextAttributes = [
-			NSAttributedString.Key.foregroundColor: UIColor.white
-		]
-		navVC.navigationBar.tintColor = .white
 		
 		let window = UIWindow(frame: UIScreen.main.bounds)
 		window.rootViewController = navVC

@@ -21,6 +21,17 @@ class ListClassViewController: UIViewController {
 		title = "List Class"
 	}
 	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		
+		navigationController?.navigationBar.barTintColor = .blue
+		navigationController?.navigationBar.backgroundColor = .blue
+		navigationController?.navigationBar.titleTextAttributes = [
+			NSAttributedString.Key.foregroundColor: UIColor.white
+		]
+		navigationController?.navigationBar.tintColor = .white
+	}
+	
 	private func setupTableView() {
 		tableView.delegate = self
 		tableView.dataSource = self
@@ -30,6 +41,7 @@ class ListClassViewController: UIViewController {
 	private func generateClassData() {
 		classes.append(ClassModel(dateString: "30 August 2022", title: "UIKit Basic", controller: LandingPageViewController()))
 		classes.append(ClassModel(dateString: "5 September 2022", title: "UIKit List Component", controller: ListComponentViewController()))
+		classes.append(ClassModel(dateString: "12 September 2022", title: "UIKit Chat Room", controller: ChatRoomViewController()))
 	}
 }
 
