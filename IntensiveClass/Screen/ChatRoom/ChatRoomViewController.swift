@@ -18,6 +18,7 @@ class ChatRoomViewController: UIViewController {
 	@IBOutlet weak var constBottomStackView: NSLayoutConstraint!
 	
 	private let cellIdentifier = "ChatRoomTableCell"
+	private var observer: NSKeyValueObservation?
 	
 	var chats: [String] = [] {
 		didSet {
@@ -68,6 +69,8 @@ class ChatRoomViewController: UIViewController {
 		self.constBottomStackView.constant = 0
 	}
 	
+	// If you want to use class's observer
+	/*
 	override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
 		guard keyPath == #keyPath(UITextView.contentSize),
 			  let contentSize = change?[NSKeyValueChangeKey.newKey] as? CGSize,
@@ -75,16 +78,17 @@ class ChatRoomViewController: UIViewController {
 			  objectTextView == chatTextView else {
 			return
 		}
-		
+
 		var height = contentSize.height
 		let paddingVertical: CGFloat = 16
 		let maxLines: CGFloat = 4
 		let maxHeight = (20 * maxLines) + paddingVertical
 		height = max(32, height)
 		height = min(maxHeight, height)
-		
+
 		constHeightTextView.constant = height
 	}
+	 */
 	
 	private func setupNavigationBar() {
 		title = "Chat Room"
@@ -101,7 +105,23 @@ class ChatRoomViewController: UIViewController {
 		chatTextView.autocapitalizationType = .none
 		chatTextView.tintColor = .white
 		
-		chatTextView.addObserver(self, forKeyPath: #keyPath(UITextView.contentSize), options: [NSKeyValueObservingOptions.new], context: nil)
+		// If you want to use class's observer
+//		chatTextView.addObserver(self, forKeyPath: #keyPath(UITextView.contentSize), options: [NSKeyValueObservingOptions.new], context: nil)
+		
+		observer = chatTextView.observe(\UITextView.contentSize, options: [.new]) { [weak self] textView, change in
+			guard let contentSize = change.newValue else {
+				return
+			}
+			
+			var height = contentSize.height
+			let paddingVertical: CGFloat = 16
+			let maxLines: CGFloat = 4
+			let maxHeight = (20 * maxLines) + paddingVertical
+			height = max(32, height)
+			height = min(maxHeight, height)
+			
+			self?.constHeightTextView.constant = height
+		}
 	}
 	
 	private func setupTableView() {
