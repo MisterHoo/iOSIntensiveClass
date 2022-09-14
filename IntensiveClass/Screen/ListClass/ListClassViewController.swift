@@ -30,6 +30,7 @@ class ListClassViewController: UIViewController {
 	private func generateClassData() {
 		classes.append(ClassModel(dateString: "30 August 2022", title: "UIKit Basic", controller: LandingPageViewController()))
 		classes.append(ClassModel(dateString: "5 September 2022", title: "Collection", controller: PhotoCollectionViewController()))
+		classes.append(ClassModel(dateString: "12 September 2022", title: "Chat Room", controller: ChatRoomViewController()))
 	}
 }
 

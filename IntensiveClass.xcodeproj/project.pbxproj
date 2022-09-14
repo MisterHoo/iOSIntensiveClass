@@ -11,6 +11,8 @@
 		082C3AB728C6305800BDB91A /* PhotoCollectionTableCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 082C3AB528C6305800BDB91A /* PhotoCollectionTableCellTableViewCell.xib */; };
 		084716B728C87A2D00AD8A28 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084716B528C87A2D00AD8A28 /* PhotoCollectionViewCell.swift */; };
 		084716B828C87A2D00AD8A28 /* PhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 084716B628C87A2D00AD8A28 /* PhotoCollectionViewCell.xib */; };
+		08A1552628D05BA400F350FF /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A1552428D05BA400F350FF /* ChatRoomViewController.swift */; };
+		08A1552728D05BA400F350FF /* ChatRoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08A1552528D05BA400F350FF /* ChatRoomViewController.xib */; };
 		08A781BC28C5F5D200D9D2EF /* PhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A781BA28C5F5D200D9D2EF /* PhotoCollectionViewController.swift */; };
 		08A781BD28C5F5D200D9D2EF /* PhotoCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08A781BB28C5F5D200D9D2EF /* PhotoCollectionViewController.xib */; };
 		DB65F28A28BDFF3400218041 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB65F28928BDFF3400218041 /* AppDelegate.swift */; };
@@ -31,6 +33,8 @@
 		082C3AB528C6305800BDB91A /* PhotoCollectionTableCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCollectionTableCellTableViewCell.xib; sourceTree = "<group>"; };
 		084716B528C87A2D00AD8A28 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		084716B628C87A2D00AD8A28 /* PhotoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCollectionViewCell.xib; sourceTree = "<group>"; };
+		08A1552428D05BA400F350FF /* ChatRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
+		08A1552528D05BA400F350FF /* ChatRoomViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatRoomViewController.xib; sourceTree = "<group>"; };
 		08A781BA28C5F5D200D9D2EF /* PhotoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewController.swift; sourceTree = "<group>"; };
 		08A781BB28C5F5D200D9D2EF /* PhotoCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCollectionViewController.xib; sourceTree = "<group>"; };
 		DB65F28628BDFF3400218041 /* IntensiveClass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntensiveClass.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,6 +81,15 @@
 			path = PhotoCollectionViewCell;
 			sourceTree = "<group>";
 		};
+		08A1552328D05B8600F350FF /* ChatRoomPage */ = {
+			isa = PBXGroup;
+			children = (
+				08A1552428D05BA400F350FF /* ChatRoomViewController.swift */,
+				08A1552528D05BA400F350FF /* ChatRoomViewController.xib */,
+			);
+			path = ChatRoomPage;
+			sourceTree = "<group>";
+		};
 		08A781B928C5F57200D9D2EF /* PhotoCollectionPage */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +134,7 @@
 		DB65F29D28BE000600218041 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				08A1552328D05B8600F350FF /* ChatRoomPage */,
 				08A781B928C5F57200D9D2EF /* PhotoCollectionPage */,
 				DBB7E44528C5C1C50085CEDA /* ListClass */,
 				DB65F29E28BE001400218041 /* LandingPage */,
@@ -232,6 +246,7 @@
 			files = (
 				DBB7E44928C5C1EA0085CEDA /* ListClassViewController.xib in Resources */,
 				082C3AB728C6305800BDB91A /* PhotoCollectionTableCellTableViewCell.xib in Resources */,
+				08A1552728D05BA400F350FF /* ChatRoomViewController.xib in Resources */,
 				08A781BD28C5F5D200D9D2EF /* PhotoCollectionViewController.xib in Resources */,
 				DB6ABA1628BE10A900FB7729 /* LabelAndCounterViewController.xib in Resources */,
 				DB65F2A228BE006200218041 /* LandingPageViewController.xib in Resources */,
@@ -255,6 +270,7 @@
 				DB6ABA1028BE105C00FB7729 /* UIView.swift in Sources */,
 				084716B728C87A2D00AD8A28 /* PhotoCollectionViewCell.swift in Sources */,
 				DB65F2A128BE006200218041 /* LandingPageViewController.swift in Sources */,
+				08A1552628D05BA400F350FF /* ChatRoomViewController.swift in Sources */,
 				DBB7E44828C5C1EA0085CEDA /* ListClassViewController.swift in Sources */,
 				082C3AB628C6305800BDB91A /* PhotoCollectionTableCellTableViewCell.swift in Sources */,
 			);
