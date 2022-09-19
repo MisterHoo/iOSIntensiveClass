@@ -9,11 +9,25 @@ import UIKit
 
 class ChatRoomViewController: UIViewController {
 
-    override func viewDidLoad() {
+	@IBOutlet weak var tableView: UITableView!
+	override func viewDidLoad() {
         super.viewDidLoad()
+		setupTableView()
 
         // Do any additional setup after loading the view.
     }
+	
+	private func setupTableView() {
+//		self.tableView.register(UINib.init(nibName: "tableview", bundle: nil), forCellReuseIdentifier: "r")
+//		tableView.delegate = self
+//		tableView.dataSource = self
+		tableView.tableFooterView = UIView()
+//
+//		tableView.estimatedRowHeight = 600
+	}
+	
+	
+	
 
 
     /*

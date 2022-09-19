@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChatRoomViewController" customModule="IntensiveClass" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="zVS-u9-I7v" id="XaB-AT-CXJ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,16 +20,16 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="4ZX-ab-3sj">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="898"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="4ZX-ab-3sj">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="zVS-u9-I7v">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="776"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </tableView>
                         <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ulE-jx-kFH">
-                            <rect key="frame" x="0.0" y="776" width="414" height="122"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <rect key="frame" x="0.0" y="776" width="414" height="42"/>
+                            <color key="backgroundColor" systemColor="systemBrownColor"/>
                         </view>
                     </subviews>
                 </stackView>
@@ -36,9 +37,10 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="4ZX-ab-3sj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="8kY-Re-1U6"/>
+                <constraint firstItem="4ZX-ab-3sj" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="0fz-DY-qfm"/>
                 <constraint firstItem="4ZX-ab-3sj" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="A3S-i2-mL8"/>
                 <constraint firstItem="4ZX-ab-3sj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="BLU-pB-SUY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="4ZX-ab-3sj" secondAttribute="top" id="UXN-oS-7wM"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="113.83928571428571"/>
         </view>
@@ -46,6 +48,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
