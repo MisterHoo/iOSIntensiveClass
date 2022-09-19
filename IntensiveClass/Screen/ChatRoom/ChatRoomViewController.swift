@@ -10,14 +10,15 @@ import UIKit
 class ChatRoomViewController: UIViewController {
 
 	@IBOutlet weak var stackViewBottomConst: NSLayoutConstraint!
+	@IBOutlet weak var textViewHeightConstraint: NSLayoutConstraint!
 	
+	@IBOutlet weak var textView: UITextView!
 	@IBOutlet weak var tableView: UITableView!
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
 		setupTableView()
-
-        // Do any additional setup after loading the view.
+		setupTextView()
     }
 	
 	override func viewWillAppear(_ animated: Bool) {
@@ -51,10 +52,14 @@ class ChatRoomViewController: UIViewController {
 		tableView.dataSource = self
 		tableView.tableFooterView = UIView()
 	}
+	
+	private func setupTextView() {
+		textView.delegate = self
+	}
 
 }
 
-extension ChatRoomViewController: UITableViewDataSource {
+extension ChatRoomViewController: UITableViewDataSource, UITableViewDelegate {
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		return UITableViewCell()
 	}
@@ -64,7 +69,11 @@ extension ChatRoomViewController: UITableViewDataSource {
 	}
 }
 
-extension ChatRoomViewController: UITableViewDelegate {
+extension ChatRoomViewController: UITextViewDelegate {
+	
+	func textViewDidChange(_ textView: UITextView) {
+		textViewHeightConstraint.constant = textView.contentSize.height
+	}
 	
 }
 

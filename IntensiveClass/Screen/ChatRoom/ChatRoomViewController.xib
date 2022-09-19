@@ -13,6 +13,8 @@
             <connections>
                 <outlet property="stackViewBottomConst" destination="0fz-DY-qfm" id="00z-su-D0s"/>
                 <outlet property="tableView" destination="zVS-u9-I7v" id="XaB-AT-CXJ"/>
+                <outlet property="textView" destination="i1B-bL-cew" id="Twq-AL-Q0f"/>
+                <outlet property="textViewHeightConstraint" destination="gdj-6d-eBV" id="YIE-H9-BxW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -25,30 +27,31 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="zVS-u9-I7v">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="762"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="770"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </tableView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ulE-jx-kFH">
-                            <rect key="frame" x="0.0" y="762" width="414" height="56"/>
+                            <rect key="frame" x="0.0" y="770" width="414" height="48"/>
                             <subviews>
                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Lorem ipsum" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="i1B-bL-cew">
-                                    <rect key="frame" x="16" y="8" width="314" height="40"/>
+                                    <rect key="frame" x="16" y="8" width="304" height="32"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="40" id="gdj-6d-eBV"/>
+                                        <constraint firstAttribute="height" constant="32" id="gdj-6d-eBV"/>
                                     </constraints>
                                     <color key="textColor" systemColor="labelColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUU-PZ-I3H">
-                                    <rect key="frame" x="338" y="-12" width="60" height="60"/>
+                                    <rect key="frame" x="328" y="5" width="70" height="35"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="60" id="Fx6-j3-cI3"/>
-                                        <constraint firstAttribute="width" secondItem="gUU-PZ-I3H" secondAttribute="height" id="OuR-nk-nxU"/>
+                                        <constraint firstAttribute="width" constant="70" id="Fx6-j3-cI3"/>
+                                        <constraint firstAttribute="width" secondItem="gUU-PZ-I3H" secondAttribute="height" multiplier="2:1" id="OuR-nk-nxU"/>
                                     </constraints>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="Send"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="SEND"/>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBrownColor"/>
