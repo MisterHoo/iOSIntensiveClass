@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChatRoomViewController" customModule="IntensiveClass" customModuleProvider="target">
             <connections>
+                <outlet property="stackViewBottomConst" destination="0fz-DY-qfm" id="00z-su-D0s"/>
                 <outlet property="tableView" destination="zVS-u9-I7v" id="XaB-AT-CXJ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -20,7 +21,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="4ZX-ab-3sj">
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4ZX-ab-3sj">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="zVS-u9-I7v">
@@ -30,28 +31,29 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ulE-jx-kFH">
                             <rect key="frame" x="0.0" y="762" width="414" height="56"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUU-PZ-I3H">
-                                    <rect key="frame" x="338" y="8" width="60" height="40"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="60" id="Fx6-j3-cI3"/>
-                                        <constraint firstAttribute="height" constant="40" id="mKm-EV-RWK"/>
-                                    </constraints>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="Send"/>
-                                </button>
                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Lorem ipsum" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="i1B-bL-cew">
                                     <rect key="frame" x="16" y="8" width="314" height="40"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="gdj-6d-eBV"/>
+                                    </constraints>
                                     <color key="textColor" systemColor="labelColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUU-PZ-I3H">
+                                    <rect key="frame" x="338" y="-12" width="60" height="60"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="60" id="Fx6-j3-cI3"/>
+                                        <constraint firstAttribute="width" secondItem="gUU-PZ-I3H" secondAttribute="height" id="OuR-nk-nxU"/>
+                                    </constraints>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Send"/>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBrownColor"/>
                             <constraints>
                                 <constraint firstItem="i1B-bL-cew" firstAttribute="top" secondItem="ulE-jx-kFH" secondAttribute="top" constant="8" id="1nj-lF-Rum"/>
-                                <constraint firstItem="gUU-PZ-I3H" firstAttribute="top" secondItem="ulE-jx-kFH" secondAttribute="top" constant="8" id="5gw-3k-yGR"/>
-                                <constraint firstAttribute="trailing" secondItem="i1B-bL-cew" secondAttribute="trailing" constant="84" id="9px-lu-TAd"/>
                                 <constraint firstItem="gUU-PZ-I3H" firstAttribute="leading" secondItem="i1B-bL-cew" secondAttribute="trailing" constant="8" id="GaU-Io-xUR"/>
                                 <constraint firstAttribute="bottom" secondItem="gUU-PZ-I3H" secondAttribute="bottom" constant="8" id="SBH-pb-kcR"/>
                                 <constraint firstAttribute="bottom" secondItem="i1B-bL-cew" secondAttribute="bottom" constant="8" id="Vtg-W7-aeS"/>
@@ -60,10 +62,6 @@
                             </constraints>
                         </view>
                     </subviews>
-                    <constraints>
-                        <constraint firstAttribute="trailing" secondItem="ulE-jx-kFH" secondAttribute="trailing" id="X9Y-vW-N7o"/>
-                        <constraint firstItem="ulE-jx-kFH" firstAttribute="leading" secondItem="4ZX-ab-3sj" secondAttribute="leading" id="cur-vg-q8U"/>
-                    </constraints>
                 </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
