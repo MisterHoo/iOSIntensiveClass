@@ -23,12 +23,12 @@
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="4ZX-ab-3sj">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
-                        <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="zVS-u9-I7v">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="731"/>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="zVS-u9-I7v">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="762"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </tableView>
-                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ulE-jx-kFH">
-                            <rect key="frame" x="0.0" y="731" width="414" height="87"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ulE-jx-kFH">
+                            <rect key="frame" x="0.0" y="762" width="414" height="56"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUU-PZ-I3H">
                                     <rect key="frame" x="338" y="8" width="60" height="40"/>
@@ -39,8 +39,8 @@
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" title="Send"/>
                                 </button>
-                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="Lorem ipsum" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="i1B-bL-cew">
-                                    <rect key="frame" x="16" y="13" width="314" height="41"/>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Lorem ipsum" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="i1B-bL-cew">
+                                    <rect key="frame" x="16" y="8" width="314" height="40"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="textColor" systemColor="labelColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -49,8 +49,12 @@
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBrownColor"/>
                             <constraints>
+                                <constraint firstItem="i1B-bL-cew" firstAttribute="top" secondItem="ulE-jx-kFH" secondAttribute="top" constant="8" id="1nj-lF-Rum"/>
                                 <constraint firstItem="gUU-PZ-I3H" firstAttribute="top" secondItem="ulE-jx-kFH" secondAttribute="top" constant="8" id="5gw-3k-yGR"/>
+                                <constraint firstAttribute="trailing" secondItem="i1B-bL-cew" secondAttribute="trailing" constant="84" id="9px-lu-TAd"/>
                                 <constraint firstItem="gUU-PZ-I3H" firstAttribute="leading" secondItem="i1B-bL-cew" secondAttribute="trailing" constant="8" id="GaU-Io-xUR"/>
+                                <constraint firstAttribute="bottom" secondItem="gUU-PZ-I3H" secondAttribute="bottom" constant="8" id="SBH-pb-kcR"/>
+                                <constraint firstAttribute="bottom" secondItem="i1B-bL-cew" secondAttribute="bottom" constant="8" id="Vtg-W7-aeS"/>
                                 <constraint firstItem="i1B-bL-cew" firstAttribute="leading" secondItem="ulE-jx-kFH" secondAttribute="leading" constant="16" id="f9Y-K8-gxW"/>
                                 <constraint firstAttribute="trailing" secondItem="gUU-PZ-I3H" secondAttribute="trailing" constant="16" id="hum-Zv-uRo"/>
                             </constraints>
