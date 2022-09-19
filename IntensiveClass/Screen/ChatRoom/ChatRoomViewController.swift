@@ -72,7 +72,14 @@ extension ChatRoomViewController: UITableViewDataSource, UITableViewDelegate {
 extension ChatRoomViewController: UITextViewDelegate {
 	
 	func textViewDidChange(_ textView: UITextView) {
-		textViewHeightConstraint.constant = textView.contentSize.height
+		
+		var height = textView.contentSize.height
+		let maxLines: CGFloat = 4
+		let maxHeight = (20 * maxLines) + 8
+		height = max(32, height)
+		height = min(maxHeight, height)
+		
+		textViewHeightConstraint.constant = height
 	}
 	
 }
