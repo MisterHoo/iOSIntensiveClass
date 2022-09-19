@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF2AC05C28D840F500B0E685 /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2AC05A28D840F500B0E685 /* ChatRoomViewController.swift */; };
+		AF2AC05D28D840F500B0E685 /* ChatRoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF2AC05B28D840F500B0E685 /* ChatRoomViewController.xib */; };
 		AF9C732428C77C4800DE48A0 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9C732228C77C4800DE48A0 /* PhotoCollectionViewCell.swift */; };
 		AF9C732528C77C4800DE48A0 /* PhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF9C732328C77C4800DE48A0 /* PhotoCollectionViewCell.xib */; };
 		AFA39B5328C5F53300A2FD5F /* ListComponentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA39B5128C5F53300A2FD5F /* ListComponentViewController.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF2AC05A28D840F500B0E685 /* ChatRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
+		AF2AC05B28D840F500B0E685 /* ChatRoomViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatRoomViewController.xib; sourceTree = "<group>"; };
 		AF9C732228C77C4800DE48A0 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		AF9C732328C77C4800DE48A0 /* PhotoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCollectionViewCell.xib; sourceTree = "<group>"; };
 		AFA39B5128C5F53300A2FD5F /* ListComponentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListComponentViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +63,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF2AC05928D8402B00B0E685 /* ChatRoom */ = {
+			isa = PBXGroup;
+			children = (
+				AF2AC05A28D840F500B0E685 /* ChatRoomViewController.swift */,
+				AF2AC05B28D840F500B0E685 /* ChatRoomViewController.xib */,
+			);
+			path = ChatRoom;
+			sourceTree = "<group>";
+		};
 		AF9C732128C77BC500DE48A0 /* PhotoCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +134,7 @@
 		DB65F29D28BE000600218041 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				AF2AC05928D8402B00B0E685 /* ChatRoom */,
 				AFA39B5028C5F41400A2FD5F /* ListComponentClass */,
 				DBB7E44528C5C1C50085CEDA /* ListClass */,
 				DB65F29E28BE001400218041 /* LandingPage */,
@@ -232,6 +246,7 @@
 			files = (
 				AFA39B6128C5FB8200A2FD5F /* ContentComponentTableViewCell.xib in Resources */,
 				AFA39B5428C5F53300A2FD5F /* ListComponentViewController.xib in Resources */,
+				AF2AC05D28D840F500B0E685 /* ChatRoomViewController.xib in Resources */,
 				DBB7E44928C5C1EA0085CEDA /* ListClassViewController.xib in Resources */,
 				DB6ABA1628BE10A900FB7729 /* LabelAndCounterViewController.xib in Resources */,
 				DB65F2A228BE006200218041 /* LandingPageViewController.xib in Resources */,
@@ -255,6 +270,7 @@
 				DB6ABA1028BE105C00FB7729 /* UIView.swift in Sources */,
 				AF9C732428C77C4800DE48A0 /* PhotoCollectionViewCell.swift in Sources */,
 				DB65F2A128BE006200218041 /* LandingPageViewController.swift in Sources */,
+				AF2AC05C28D840F500B0E685 /* ChatRoomViewController.swift in Sources */,
 				DBB7E44828C5C1EA0085CEDA /* ListClassViewController.swift in Sources */,
 				AFA39B6028C5FB8200A2FD5F /* ContentComponentTableViewCell.swift in Sources */,
 			);
