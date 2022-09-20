@@ -15,6 +15,8 @@ class ChatRoomViewController: UIViewController {
 	@IBOutlet weak var textView: UITextView!
 	@IBOutlet weak var tableView: UITableView!
 	
+	let chatCellIdentifier = "ChatTableViewCell"
+	
 	override func viewDidLoad() {
         super.viewDidLoad()
 		setupTableView()
@@ -51,6 +53,8 @@ class ChatRoomViewController: UIViewController {
 		tableView.delegate = self
 		tableView.dataSource = self
 		tableView.tableFooterView = UIView()
+		tableView.register(UINib.init(nibName: chatCellIdentifier, bundle: nil), forCellReuseIdentifier: chatCellIdentifier)
+		tableView.isUserInteractionEnabled = false
 	}
 	
 	private func setupTextView() {
@@ -61,11 +65,15 @@ class ChatRoomViewController: UIViewController {
 
 extension ChatRoomViewController: UITableViewDataSource, UITableViewDelegate {
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		return UITableViewCell()
+		guard let cell = tableView.dequeueReusableCell(withIdentifier: chatCellIdentifier, for: indexPath) as? ChatTableViewCell else { return UITableViewCell() }
+		
+		cell.imageChatName = "doraemon.png"
+		
+		return cell
 	}
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return 0
+		return 1
 	}
 }
 

@@ -49,7 +49,6 @@ class ContentComponentTableViewCell: UITableViewCell {
 		photoCollectionView.showsHorizontalScrollIndicator = false
 		photoCollectionView.delegate = self
 		photoCollectionView.dataSource = self
-//		photoCollectionView.contentInset = UIEdgeInsets(top: 0, left: 90, bottom: 0, right: 0)
 		let cellNib = UINib(nibName: "PhotoCollectionViewCell", bundle: nil)
 		self.photoCollectionView.register(cellNib, forCellWithReuseIdentifier: "PhotoCollectionViewCell")
 	}
