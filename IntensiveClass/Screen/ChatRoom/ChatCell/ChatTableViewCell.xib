@@ -40,6 +40,9 @@
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                <constraints>
+                                    <constraint firstItem="5yz-nd-fYC" firstAttribute="leading" secondItem="Hsf-hG-jj7" secondAttribute="leading" id="duC-Wr-FKp"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -53,6 +56,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="Mm8-at-3wY" secondAttribute="trailing" constant="8" id="2Kb-3B-iLd"/>
+                    <constraint firstItem="Mm8-at-3wY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="99r-sg-44H"/>
                     <constraint firstItem="Mm8-at-3wY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="amD-7v-BWf"/>
                     <constraint firstAttribute="bottom" secondItem="Mm8-at-3wY" secondAttribute="bottom" constant="4" id="vjz-zz-ydy"/>
                 </constraints>

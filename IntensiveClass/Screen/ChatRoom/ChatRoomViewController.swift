@@ -80,6 +80,8 @@ class ChatRoomViewController: UIViewController {
 		
 		chats.append(chat)
 		textView.text = ""
+		//dipanggil karena delegate ga ke trigger saat perubahan textnya dari code. kalau mau ke panggil, pake observe value
+		textViewDidChange(textView)
 	}
 
 }
