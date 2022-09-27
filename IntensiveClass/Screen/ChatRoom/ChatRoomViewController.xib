@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChatRoomViewController" customModule="IntensiveClass" customModuleProvider="target">
             <connections>
+                <outlet property="sendButton" destination="gUU-PZ-I3H" id="uYo-oO-ykG"/>
                 <outlet property="stackViewBottomConst" destination="0fz-DY-qfm" id="00z-su-D0s"/>
                 <outlet property="tableView" destination="zVS-u9-I7v" id="XaB-AT-CXJ"/>
                 <outlet property="textView" destination="i1B-bL-cew" id="Twq-AL-Q0f"/>
@@ -52,6 +53,9 @@
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" title="SEND"/>
+                                    <connections>
+                                        <action selector="didTapSend:" destination="-1" eventType="touchUpInside" id="nXo-7P-dbC"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBrownColor"/>

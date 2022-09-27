@@ -20,6 +20,12 @@ class ChatTableViewCell: UITableViewCell {
 		}
 	}
 	
+	var chatLabel: String = "" {
+		didSet {
+			labelChat.text = chatLabel
+		}
+	}
+	
 	override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

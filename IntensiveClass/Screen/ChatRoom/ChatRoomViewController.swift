@@ -14,6 +14,13 @@ class ChatRoomViewController: UIViewController {
 	
 	@IBOutlet weak var textView: UITextView!
 	@IBOutlet weak var tableView: UITableView!
+	@IBOutlet weak var sendButton: UIButton!
+	
+	var chats: [String] = [] {
+		didSet {
+			tableView.reloadData()
+		}
+	}
 	
 	let chatCellIdentifier = "ChatTableViewCell"
 	
@@ -23,18 +30,35 @@ class ChatRoomViewController: UIViewController {
 		setupTextView()
     }
 	
+	//Setting Up Element
+	private func setupTableView() {
+		tableView.delegate = self
+		tableView.dataSource = self
+		tableView.tableFooterView = UIView()
+		tableView.register(UINib.init(nibName: chatCellIdentifier, bundle: nil), forCellReuseIdentifier: chatCellIdentifier)
+		tableView.isUserInteractionEnabled = false
+		tableView.separatorStyle = .none
+	}
+	
+	private func setupTextView() {
+		textView.delegate = self
+	}
+	
+	//Register Observer
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		NotificationCenter.default.addObserver(self, selector: #selector(showKeyboard(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
 		NotificationCenter.default.addObserver(self, selector: #selector(hideKeyboard(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
 	}
 	
+	//Removing Observer, to prevent error
 	override func viewWillDisappear(_ animated: Bool) {
 		super.viewWillDisappear(animated)
 		NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
 		NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
 	}
 	
+	//Action if observer is triggered
 	@objc private func showKeyboard(_ notification: Notification) {
 		guard let userInfo = notification.userInfo,
 			  let keyboardFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
@@ -48,17 +72,14 @@ class ChatRoomViewController: UIViewController {
 		self.stackViewBottomConst.constant = 0
 	}
 	
-	
-	private func setupTableView() {
-		tableView.delegate = self
-		tableView.dataSource = self
-		tableView.tableFooterView = UIView()
-		tableView.register(UINib.init(nibName: chatCellIdentifier, bundle: nil), forCellReuseIdentifier: chatCellIdentifier)
-		tableView.isUserInteractionEnabled = false
-	}
-	
-	private func setupTextView() {
-		textView.delegate = self
+	//Action Button
+	@IBAction func didTapSend(_ sender: Any) {
+		guard let chat = textView.text else {
+				  return
+			  }
+		
+		chats.append(chat)
+		textView.text = ""
 	}
 
 }
@@ -68,12 +89,13 @@ extension ChatRoomViewController: UITableViewDataSource, UITableViewDelegate {
 		guard let cell = tableView.dequeueReusableCell(withIdentifier: chatCellIdentifier, for: indexPath) as? ChatTableViewCell else { return UITableViewCell() }
 		
 		cell.imageChatName = "doraemon.png"
+		cell.chatLabel = chats[indexPath.row]
 		
 		return cell
 	}
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return 1
+		return chats.count
 	}
 }
 
