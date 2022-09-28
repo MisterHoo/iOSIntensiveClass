@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB06175A28E448D600C35ADD /* InputFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB06175828E448D600C35ADD /* InputFormViewController.swift */; };
+		DB06175B28E448D600C35ADD /* InputFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB06175928E448D600C35ADD /* InputFormViewController.xib */; };
 		DB65F28A28BDFF3400218041 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB65F28928BDFF3400218041 /* AppDelegate.swift */; };
 		DB65F29328BDFF3700218041 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB65F29228BDFF3700218041 /* Assets.xcassets */; };
 		DB65F29628BDFF3700218041 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB65F29428BDFF3700218041 /* LaunchScreen.storyboard */; };
@@ -31,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DB06175828E448D600C35ADD /* InputFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFormViewController.swift; sourceTree = "<group>"; };
+		DB06175928E448D600C35ADD /* InputFormViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputFormViewController.xib; sourceTree = "<group>"; };
 		DB65F28628BDFF3400218041 /* IntensiveClass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntensiveClass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB65F28928BDFF3400218041 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB65F29228BDFF3700218041 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -67,6 +71,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB06175728E448B800C35ADD /* InputForm */ = {
+			isa = PBXGroup;
+			children = (
+				DB06175828E448D600C35ADD /* InputFormViewController.swift */,
+				DB06175928E448D600C35ADD /* InputFormViewController.xib */,
+			);
+			path = InputForm;
+			sourceTree = "<group>";
+		};
 		DB65F27D28BDFF3400218041 = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +113,7 @@
 		DB65F29D28BE000600218041 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				DB06175728E448B800C35ADD /* InputForm */,
 				DBB7E45928CEE4BA0085CEDA /* ChatRoom */,
 				DBB7E44A28C5C5070085CEDA /* ListComponent */,
 				DBB7E44528C5C1C50085CEDA /* ListClass */,
@@ -261,6 +275,7 @@
 				DBB7E44928C5C1EA0085CEDA /* ListClassViewController.xib in Resources */,
 				DB6ABA1628BE10A900FB7729 /* LabelAndCounterViewController.xib in Resources */,
 				DBB7E45D28CEE4D10085CEDA /* ChatRoomViewController.xib in Resources */,
+				DB06175B28E448D600C35ADD /* InputFormViewController.xib in Resources */,
 				DB65F2A228BE006200218041 /* LandingPageViewController.xib in Resources */,
 				DBB7E44F28C5C5240085CEDA /* ListComponentViewController.xib in Resources */,
 				DB65F29628BDFF3700218041 /* LaunchScreen.storyboard in Resources */,
@@ -285,6 +300,7 @@
 				DBB7E45728C5C8D50085CEDA /* PhotoCollectionCell.swift in Sources */,
 				DB65F28A28BDFF3400218041 /* AppDelegate.swift in Sources */,
 				DBB7E45228C5C5610085CEDA /* ListCommentTableCell.swift in Sources */,
+				DB06175A28E448D600C35ADD /* InputFormViewController.swift in Sources */,
 				DB6ABA1028BE105C00FB7729 /* UIView.swift in Sources */,
 				DBB7E45C28CEE4D10085CEDA /* ChatRoomViewController.swift in Sources */,
 				DB65F2A128BE006200218041 /* LandingPageViewController.swift in Sources */,
