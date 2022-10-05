@@ -97,6 +97,27 @@ class InputFormViewController: UIViewController {
 	// timestamp Date().timeIntervalSince1970 -> INI TIMESTAMP
 	// Firebase timestamp / 1000
 	// Date(timeIntervalSince1970: FirebaseTimeStamp / 1000)
+	
+	func validatePassword(password: String) -> Bool{
+		let passwordRegex =
+		// At least one capital letter
+		#"^(?=.*[A-Z])"# +
+		
+		// At least one lowercase letter
+		#"(?=.*[a-z])"# +
+		
+		// At least one digit
+		#"(?=.*\d)"# +
+		
+		// At least one special character
+		#"(?=.[$@$#!%?&])"# +
+		
+		// At least 8 characters
+		#".{8,}$"#
+		
+		let passwordPred = NSPredicate(format:"SELF MATCHES %@", passwordRegex)
+		return passwordPred.evaluate(with: password)
+	}
 }
 
 extension InputFormViewController: UITextFieldDelegate {
