@@ -43,6 +43,7 @@ class ListClassViewController: UIViewController {
 		classes.append(ClassModel(dateString: "5 September 2022", title: "UIKit List Component", controller: ListComponentViewController()))
 		classes.append(ClassModel(dateString: "12 September 2022", title: "UIKit Chat Room", controller: ChatRoomViewController()))
 		classes.append(ClassModel(dateString: "28 September 2022", title: "UIKit Input Form", controller: InputFormViewController()))
+		classes.append(ClassModel(dateString: "19 October 2022", title: "Search Bar", controller: SearchBarViewController()))
 	}
 }
 

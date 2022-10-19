@@ -18,19 +18,40 @@ class InputFormViewController: UIViewController {
 	@IBOutlet weak var emailTextField: UITextField!
 	@IBOutlet weak var dobTextField: UITextField!
 	
+	@IBOutlet weak var passwordErrorLabel: UILabel!
+	@IBOutlet weak var emailCounterLabel: UILabel!
+	
+	@IBOutlet weak var passwordVisibilityButton: UIButton!
 	let datePicker = UIDatePicker()
 	
+	@IBAction func didTapRegister(_ sender: Any) {
+		let controller = OTPPageViewController()
+		self.navigationController?.pushViewController(controller, animated: true)
+	}
+	
+	@IBAction func showPassword(_ sender: Any) {
+		passwordTextField.isSecureTextEntry = false
+		passwordVisibilityButton.setTitle("Release to Hide", for: .normal)
+	}
+	
+	@IBAction func hidePassword(_ sender: Any) {
+		passwordTextField.isSecureTextEntry = true
+		passwordVisibilityButton.setTitle("Show Password", for: .normal)
+	}
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
 		usernameTextField.delegate = self
+		passwordTextField.delegate = self
 		phoneNumberTextField.delegate = self
+		emailTextField.delegate = self
 		scrollView.keyboardDismissMode = .onDrag
 		dobTextField.delegate = self
 		
 		datePicker.maximumDate = Date()
 		datePicker.datePickerMode = .date
 		datePicker.preferredDatePickerStyle = .wheels
+		datePicker.addTarget(self, action: #selector(dateDidChange), for: .valueChanged)
 		
 		dobTextField.inputView = datePicker
 		
@@ -41,7 +62,16 @@ class InputFormViewController: UIViewController {
 		toolbar.setItems([flexibleSpace, doneButton], animated: false)
 		
 		dobTextField.inputAccessoryView = toolbar
+		
+		passwordTextField.textContentType = .oneTimeCode
+		
+		passwordErrorLabel.isHidden = true
+		
     }
+	
+	@objc private func dateDidChange() {
+		dobTextField.text = formatDate(date: datePicker.date)
+	}
 	
 	@objc private func didTapDone() {
 		self.view.endEditing(true)
@@ -109,9 +139,6 @@ class InputFormViewController: UIViewController {
 		// At least one digit
 		#"(?=.*\d)"# +
 		
-		// At least one special character
-		#"(?=.[$@$#!%?&])"# +
-		
 		// At least 8 characters
 		#".{8,}$"#
 		
@@ -140,14 +167,28 @@ extension InputFormViewController: UITextFieldDelegate {
 		} else if textField == phoneNumberTextField {
 			textField.text = formatPhoneNumber(text: currentText)
 			return false
+		} else if textField == emailTextField {
+			guard currentText.count <= 30 else {
+				return false
+			}
+			emailCounterLabel.text = "\(currentText.count)/30"
 		}
 		
 		return true
 	}
 	
+	func textFieldDidBeginEditing(_ textField: UITextField) {
+		if textField == passwordTextField {
+			passwordErrorLabel.isHidden = true
+		}
+	}
+	
 	func textFieldDidEndEditing(_ textField: UITextField) {
 		if textField == dobTextField {
 			dobTextField.text = formatDate(date: datePicker.date)
+		} else if textField == passwordTextField {
+			let isValidPassword = validatePassword(password: textField.text ?? "")
+			passwordErrorLabel.isHidden = isValidPassword
 		}
 	}
 }

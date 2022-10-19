@@ -30,6 +30,11 @@
 		DBB7E45D28CEE4D10085CEDA /* ChatRoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBB7E45B28CEE4D10085CEDA /* ChatRoomViewController.xib */; };
 		DBB7E46128CEEE6A0085CEDA /* ChatRoomTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB7E45F28CEEE6A0085CEDA /* ChatRoomTableCell.swift */; };
 		DBB7E46228CEEE6A0085CEDA /* ChatRoomTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBB7E46028CEEE6A0085CEDA /* ChatRoomTableCell.xib */; };
+		DBF8428C28FEB16200891404 /* OTPPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF8428A28FEB16200891404 /* OTPPageViewController.swift */; };
+		DBF8428D28FEB16200891404 /* OTPPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBF8428B28FEB16200891404 /* OTPPageViewController.xib */; };
+		DBF8428F28FEB30500891404 /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF8428E28FEB30500891404 /* OTPTextField.swift */; };
+		DBF8429B29000A4600891404 /* SearchBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF8429929000A4600891404 /* SearchBarViewController.swift */; };
+		DBF8429C29000A4600891404 /* SearchBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBF8429A29000A4600891404 /* SearchBarViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +63,11 @@
 		DBB7E45B28CEE4D10085CEDA /* ChatRoomViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatRoomViewController.xib; sourceTree = "<group>"; };
 		DBB7E45F28CEEE6A0085CEDA /* ChatRoomTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomTableCell.swift; sourceTree = "<group>"; };
 		DBB7E46028CEEE6A0085CEDA /* ChatRoomTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatRoomTableCell.xib; sourceTree = "<group>"; };
+		DBF8428A28FEB16200891404 /* OTPPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPPageViewController.swift; sourceTree = "<group>"; };
+		DBF8428B28FEB16200891404 /* OTPPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OTPPageViewController.xib; sourceTree = "<group>"; };
+		DBF8428E28FEB30500891404 /* OTPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextField.swift; sourceTree = "<group>"; };
+		DBF8429929000A4600891404 /* SearchBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarViewController.swift; sourceTree = "<group>"; };
+		DBF8429A29000A4600891404 /* SearchBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchBarViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +84,7 @@
 		DB06175728E448B800C35ADD /* InputForm */ = {
 			isa = PBXGroup;
 			children = (
+				DBF8428928FEB14900891404 /* OTPPage */,
 				DB06175828E448D600C35ADD /* InputFormViewController.swift */,
 				DB06175928E448D600C35ADD /* InputFormViewController.xib */,
 			);
@@ -113,6 +124,7 @@
 		DB65F29D28BE000600218041 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				DBF8429829000A0500891404 /* SearchBar */,
 				DB06175728E448B800C35ADD /* InputForm */,
 				DBB7E45928CEE4BA0085CEDA /* ChatRoom */,
 				DBB7E44A28C5C5070085CEDA /* ListComponent */,
@@ -135,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				DB6ABA0F28BE105C00FB7729 /* UIView.swift */,
+				DBF8428E28FEB30500891404 /* OTPTextField.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -214,6 +227,24 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		DBF8428928FEB14900891404 /* OTPPage */ = {
+			isa = PBXGroup;
+			children = (
+				DBF8428A28FEB16200891404 /* OTPPageViewController.swift */,
+				DBF8428B28FEB16200891404 /* OTPPageViewController.xib */,
+			);
+			path = OTPPage;
+			sourceTree = "<group>";
+		};
+		DBF8429829000A0500891404 /* SearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				DBF8429929000A4600891404 /* SearchBarViewController.swift */,
+				DBF8429A29000A4600891404 /* SearchBarViewController.xib */,
+			);
+			path = SearchBar;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -273,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBB7E44928C5C1EA0085CEDA /* ListClassViewController.xib in Resources */,
+				DBF8428D28FEB16200891404 /* OTPPageViewController.xib in Resources */,
 				DB6ABA1628BE10A900FB7729 /* LabelAndCounterViewController.xib in Resources */,
 				DBB7E45D28CEE4D10085CEDA /* ChatRoomViewController.xib in Resources */,
 				DB06175B28E448D600C35ADD /* InputFormViewController.xib in Resources */,
@@ -282,6 +314,7 @@
 				DB65F29328BDFF3700218041 /* Assets.xcassets in Resources */,
 				DBB7E45828C5C8D50085CEDA /* PhotoCollectionCell.xib in Resources */,
 				DBB7E45328C5C5610085CEDA /* ListCommentTableCell.xib in Resources */,
+				DBF8429C29000A4600891404 /* SearchBarViewController.xib in Resources */,
 				DBB7E46228CEEE6A0085CEDA /* ChatRoomTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB6ABA1528BE10A900FB7729 /* LabelAndCounterViewController.swift in Sources */,
+				DBF8428F28FEB30500891404 /* OTPTextField.swift in Sources */,
 				DBB7E44E28C5C5240085CEDA /* ListComponentViewController.swift in Sources */,
 				DBB7E46128CEEE6A0085CEDA /* ChatRoomTableCell.swift in Sources */,
 				DBA5915228BE1502008F7500 /* ProjectBaseUIView.swift in Sources */,
@@ -301,7 +335,9 @@
 				DB65F28A28BDFF3400218041 /* AppDelegate.swift in Sources */,
 				DBB7E45228C5C5610085CEDA /* ListCommentTableCell.swift in Sources */,
 				DB06175A28E448D600C35ADD /* InputFormViewController.swift in Sources */,
+				DBF8428C28FEB16200891404 /* OTPPageViewController.swift in Sources */,
 				DB6ABA1028BE105C00FB7729 /* UIView.swift in Sources */,
+				DBF8429B29000A4600891404 /* SearchBarViewController.swift in Sources */,
 				DBB7E45C28CEE4D10085CEDA /* ChatRoomViewController.swift in Sources */,
 				DB65F2A128BE006200218041 /* LandingPageViewController.swift in Sources */,
 				DBB7E44828C5C1EA0085CEDA /* ListClassViewController.swift in Sources */,
