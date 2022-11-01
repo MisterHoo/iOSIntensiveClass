@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		DB06175A28E448D600C35ADD /* InputFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB06175828E448D600C35ADD /* InputFormViewController.swift */; };
 		DB06175B28E448D600C35ADD /* InputFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB06175928E448D600C35ADD /* InputFormViewController.xib */; };
+		DB167897291113B300412A72 /* TableBatchUpdatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB167895291113B300412A72 /* TableBatchUpdatesViewController.swift */; };
+		DB167898291113B300412A72 /* TableBatchUpdatesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB167896291113B300412A72 /* TableBatchUpdatesViewController.xib */; };
 		DB65F28A28BDFF3400218041 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB65F28928BDFF3400218041 /* AppDelegate.swift */; };
 		DB65F29328BDFF3700218041 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB65F29228BDFF3700218041 /* Assets.xcassets */; };
 		DB65F29628BDFF3700218041 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB65F29428BDFF3700218041 /* LaunchScreen.storyboard */; };
@@ -40,6 +42,8 @@
 /* Begin PBXFileReference section */
 		DB06175828E448D600C35ADD /* InputFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFormViewController.swift; sourceTree = "<group>"; };
 		DB06175928E448D600C35ADD /* InputFormViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputFormViewController.xib; sourceTree = "<group>"; };
+		DB167895291113B300412A72 /* TableBatchUpdatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableBatchUpdatesViewController.swift; sourceTree = "<group>"; };
+		DB167896291113B300412A72 /* TableBatchUpdatesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableBatchUpdatesViewController.xib; sourceTree = "<group>"; };
 		DB65F28628BDFF3400218041 /* IntensiveClass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntensiveClass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB65F28928BDFF3400218041 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB65F29228BDFF3700218041 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -91,6 +95,15 @@
 			path = InputForm;
 			sourceTree = "<group>";
 		};
+		DB1678942911137800412A72 /* TableBatchUpdates */ = {
+			isa = PBXGroup;
+			children = (
+				DB167895291113B300412A72 /* TableBatchUpdatesViewController.swift */,
+				DB167896291113B300412A72 /* TableBatchUpdatesViewController.xib */,
+			);
+			path = TableBatchUpdates;
+			sourceTree = "<group>";
+		};
 		DB65F27D28BDFF3400218041 = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +137,7 @@
 		DB65F29D28BE000600218041 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				DB1678942911137800412A72 /* TableBatchUpdates */,
 				DBF8429829000A0500891404 /* SearchBar */,
 				DB06175728E448B800C35ADD /* InputForm */,
 				DBB7E45928CEE4BA0085CEDA /* ChatRoom */,
@@ -310,6 +324,7 @@
 				DB06175B28E448D600C35ADD /* InputFormViewController.xib in Resources */,
 				DB65F2A228BE006200218041 /* LandingPageViewController.xib in Resources */,
 				DBB7E44F28C5C5240085CEDA /* ListComponentViewController.xib in Resources */,
+				DB167898291113B300412A72 /* TableBatchUpdatesViewController.xib in Resources */,
 				DB65F29628BDFF3700218041 /* LaunchScreen.storyboard in Resources */,
 				DB65F29328BDFF3700218041 /* Assets.xcassets in Resources */,
 				DBB7E45828C5C8D50085CEDA /* PhotoCollectionCell.xib in Resources */,
@@ -341,6 +356,7 @@
 				DBB7E45C28CEE4D10085CEDA /* ChatRoomViewController.swift in Sources */,
 				DB65F2A128BE006200218041 /* LandingPageViewController.swift in Sources */,
 				DBB7E44828C5C1EA0085CEDA /* ListClassViewController.swift in Sources */,
+				DB167897291113B300412A72 /* TableBatchUpdatesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,7 +498,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P8B979NUW2;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = IntensiveClass/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -510,7 +526,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P8B979NUW2;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = IntensiveClass/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
