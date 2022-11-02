@@ -14,6 +14,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 		setupInitialScreen()
+		
+		#if DEBUG
+			print("Start Logging")
+		#elseif RELEASE
+			print("Not Enable Logging")
+		#endif
+		
+		#if DEVELOPMENT
+			print("Start Development")
+		#elseif STAGING
+			print("Start Staging")
+		#endif
+		
 		return true
 	}
 	
