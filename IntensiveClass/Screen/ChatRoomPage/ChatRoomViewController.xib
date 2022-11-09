@@ -32,7 +32,7 @@
                 <view contentMode="scaleToFill" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="cee-yO-O42">
                     <rect key="frame" x="0.0" y="779" width="414" height="83"/>
                     <subviews>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="asdasdasdasda" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hZu-DG-nk9">
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="asdasdasdasda" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hZu-DG-nk9">
                             <rect key="frame" x="16" y="16" width="283" height="33"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>

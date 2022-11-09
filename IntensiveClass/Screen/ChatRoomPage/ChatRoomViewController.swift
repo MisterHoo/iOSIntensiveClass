@@ -28,7 +28,7 @@ class ChatRoomViewController: UIViewController, UITextViewDelegate {
 		textView.delegate = self
 		
 //		textView.addObserver(self, forKeyPath: #keyPath(UITextView.contentSize), options: [NSKeyValueObservingOptions.new], context: nil)
-//		textView.addObserver(self, forKeyPath: #keyPath(UITextView.contentSize), options: [.new], context: nil)
+		textView.addObserver(self, forKeyPath: #keyPath(UITextView.contentSize), options: [.new], context: nil)
     }
 	
 	override func viewWillAppear(_ animated: Bool) {
@@ -55,27 +55,27 @@ class ChatRoomViewController: UIViewController, UITextViewDelegate {
 		bottomConstraint.constant = 0
 	}
 	
-	func textViewDidChange(_ textView: UITextView) {
-		heightConstraintTextView.constant = textView.contentSize.height
-	}
+//	func textViewDidChange(_ textView: UITextView) {
+//		heightConstraintTextView.constant = textView.contentSize.height
+//	}
 	
 //	func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
 //		return text !=
 //	}
 	
-//	override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-//		guard keyPath == #keyPath(UITextView.contentSize),
-//		let contentSize = change?[NSKeyValueChangeKey.newKey] as? CGSize,
-//		let objectTextView = object as? UITextView,
-//		objectTextView == textView else {
-//			return
-//		}
-//
-//		print(contentSize)
-//		var height = contentSize.height
-//		height = max(30, height)
-//		heightConstraintTextView.constant = height
-//		view.setNeedsLayout()
-//	}
+	override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+		guard keyPath == #keyPath(UITextView.contentSize),
+		let contentSize = change?[NSKeyValueChangeKey.newKey] as? CGSize,
+		let objectTextView = object as? UITextView,
+		objectTextView == textView else {
+			return
+		}
+
+		print(contentSize)
+		var height = contentSize.height
+		height = max(30, height)
+		heightConstraintTextView.constant = height
+		view.setNeedsLayout()
+	}
 	
 }
