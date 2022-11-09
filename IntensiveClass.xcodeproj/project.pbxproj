@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AFC861AD291A6EA40043AD13 /* LayerTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC861AB291A6EA40043AD13 /* LayerTabBarViewController.swift */; };
+		AFC861AE291A6EA40043AD13 /* LayerTabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFC861AC291A6EA40043AD13 /* LayerTabBarViewController.xib */; };
+		AFC861B8291A6F330043AD13 /* TabBarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC861B6291A6F330043AD13 /* TabBarCollectionViewCell.swift */; };
+		AFC861B9291A6F330043AD13 /* TabBarCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFC861B7291A6F330043AD13 /* TabBarCollectionViewCell.xib */; };
 		DB06175A28E448D600C35ADD /* InputFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB06175828E448D600C35ADD /* InputFormViewController.swift */; };
 		DB06175B28E448D600C35ADD /* InputFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB06175928E448D600C35ADD /* InputFormViewController.xib */; };
 		DB167897291113B300412A72 /* TableBatchUpdatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB167895291113B300412A72 /* TableBatchUpdatesViewController.swift */; };
@@ -53,6 +57,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AFC861AB291A6EA40043AD13 /* LayerTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerTabBarViewController.swift; sourceTree = "<group>"; };
+		AFC861AC291A6EA40043AD13 /* LayerTabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LayerTabBarViewController.xib; sourceTree = "<group>"; };
+		AFC861B6291A6F330043AD13 /* TabBarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCollectionViewCell.swift; sourceTree = "<group>"; };
+		AFC861B7291A6F330043AD13 /* TabBarCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBarCollectionViewCell.xib; sourceTree = "<group>"; };
 		DB06175828E448D600C35ADD /* InputFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFormViewController.swift; sourceTree = "<group>"; };
 		DB06175928E448D600C35ADD /* InputFormViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputFormViewController.xib; sourceTree = "<group>"; };
 		DB167895291113B300412A72 /* TableBatchUpdatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableBatchUpdatesViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +106,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AFC861A8291A6E350043AD13 /* Layer Tab Bar */ = {
+			isa = PBXGroup;
+			children = (
+				AFC861B3291A6EFE0043AD13 /* Cell */,
+				AFC861AB291A6EA40043AD13 /* LayerTabBarViewController.swift */,
+				AFC861AC291A6EA40043AD13 /* LayerTabBarViewController.xib */,
+			);
+			path = "Layer Tab Bar";
+			sourceTree = "<group>";
+		};
+		AFC861B3291A6EFE0043AD13 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				AFC861B6291A6F330043AD13 /* TabBarCollectionViewCell.swift */,
+				AFC861B7291A6F330043AD13 /* TabBarCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		DB06175728E448B800C35ADD /* InputForm */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +177,7 @@
 		DB65F29D28BE000600218041 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				AFC861A8291A6E350043AD13 /* Layer Tab Bar */,
 				DB1678942911137800412A72 /* TableBatchUpdates */,
 				DBF8429829000A0500891404 /* SearchBar */,
 				DB06175728E448B800C35ADD /* InputForm */,
@@ -331,9 +359,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFC861B9291A6F330043AD13 /* TabBarCollectionViewCell.xib in Resources */,
 				DBB7E44928C5C1EA0085CEDA /* ListClassViewController.xib in Resources */,
 				DBF8428D28FEB16200891404 /* OTPPageViewController.xib in Resources */,
 				DB6ABA1628BE10A900FB7729 /* LabelAndCounterViewController.xib in Resources */,
+				AFC861AE291A6EA40043AD13 /* LayerTabBarViewController.xib in Resources */,
 				DBB7E45D28CEE4D10085CEDA /* ChatRoomViewController.xib in Resources */,
 				DB06175B28E448D600C35ADD /* InputFormViewController.xib in Resources */,
 				DB65F2A228BE006200218041 /* LandingPageViewController.xib in Resources */,
@@ -368,6 +398,8 @@
 				DB6ABA1028BE105C00FB7729 /* UIView.swift in Sources */,
 				DBF8429B29000A4600891404 /* SearchBarViewController.swift in Sources */,
 				DBB7E45C28CEE4D10085CEDA /* ChatRoomViewController.swift in Sources */,
+				AFC861AD291A6EA40043AD13 /* LayerTabBarViewController.swift in Sources */,
+				AFC861B8291A6F330043AD13 /* TabBarCollectionViewCell.swift in Sources */,
 				DB65F2A128BE006200218041 /* LandingPageViewController.swift in Sources */,
 				DBB7E44828C5C1EA0085CEDA /* ListClassViewController.swift in Sources */,
 				DB167897291113B300412A72 /* TableBatchUpdatesViewController.swift in Sources */,
