@@ -11,13 +11,18 @@ class LayerTabBarViewController: UIViewController {
 	
 	@IBOutlet weak var tabBarCollectionView: UICollectionView!
 	
+	@IBOutlet weak var voucherContainer: UIView!
 	let cellIdentifier = "TabBarCollectionViewCell"
 	
 	private var lastIndexPath: IndexPath?
 	
 	private let cellHeight = 100.0
 	private let cellWidth = UIScreen.main.bounds.width / 3
-
+	
+	override func viewDidAppear(_ animated: Bool) {
+		setupVoucherContainer()
+	}
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 		setupCollectionView()
@@ -74,5 +79,40 @@ extension LayerTabBarViewController: UICollectionViewDataSource {
 		
 	}
 	
+}
+
+extension LayerTabBarViewController {
+	private func setupVoucherContainer() {
+		voucherContainer.layer.cornerRadius = 18
+		//bikin shape layer sebesar voucher container
+		let ticketShapeLayer = CAShapeLayer()
+		ticketShapeLayer.frame = voucherContainer.bounds
+		ticketShapeLayer.fillColor = UIColor.red.cgColor
+		
+		//bikin garis berbentuk kotak (path) sebesar ticketShapeLayer dan cornerRadius yang sama
+		let ticketShapePath = UIBezierPath(roundedRect: ticketShapeLayer.bounds, cornerRadius: 18)
+		
+		//bikin setengah lingkaran di kiri yang di gambarnya di tengah2 container
+		let leftHalfCircle = UIBezierPath(arcCenter: CGPoint(x: 0, y: voucherContainer.frame.height / 2),
+										  radius: 36 / 2,
+										  startAngle:  .pi / 2,
+										  endAngle: (3 * .pi) / 2,
+										  clockwise: false)
+		leftHalfCircle.close()
+		
+		let rightHalfCircle = UIBezierPath(arcCenter: CGPoint(x: voucherContainer.frame.width, y: voucherContainer.frame.height / 2),
+										  radius: 36 / 2,
+										  startAngle:  (3 * .pi) / 2,
+										  endAngle:  .pi / 2,
+										  clockwise: false)
+
+		rightHalfCircle.close()
+		
+		ticketShapePath.append(leftHalfCircle)
+		ticketShapePath.append(rightHalfCircle)
+		ticketShapeLayer.path = ticketShapePath.cgPath
+
+		voucherContainer.layer.addSublayer(ticketShapeLayer)
+	}
 }
 

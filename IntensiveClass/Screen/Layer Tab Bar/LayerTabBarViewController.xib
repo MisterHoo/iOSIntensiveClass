@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="tabBarCollectionView" destination="wG6-lg-t86" id="GSK-aH-c4i"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="voucherContainer" destination="lK1-w9-scn" id="VeU-J4-bPQ"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -33,12 +34,21 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lK1-w9-scn">
+                    <rect key="frame" x="32" y="348" width="350" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="MQl-Qh-TUm"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="wG6-lg-t86" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="7ZS-AJ-7eg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lK1-w9-scn" secondAttribute="trailing" constant="32" id="Cr5-wb-Aum"/>
+                <constraint firstItem="lK1-w9-scn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="EZY-nH-hlf"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wG6-lg-t86" secondAttribute="trailing" id="gY7-Jg-QrJ"/>
+                <constraint firstItem="lK1-w9-scn" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="p79-Xp-5xP"/>
                 <constraint firstItem="wG6-lg-t86" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="qr8-ak-XIt"/>
             </constraints>
             <point key="canvasLocation" x="132" y="80"/>

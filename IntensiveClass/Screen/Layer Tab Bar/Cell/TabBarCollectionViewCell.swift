@@ -33,8 +33,6 @@ class TabBarCollectionViewCell: UICollectionViewCell {
 		let cellHeight = 100.0
 		let cellWidth = containerCell.bounds.width
 		
-		print("height=\(cellHeight) width=\(cellWidth)")
-		
 		let path = UIBezierPath()
 		
 		let triangleWidth = 20.0
