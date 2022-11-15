@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DrawLayerViewController" customModule="IntensiveClass" customModuleProvider="target">
             <connections>
-                <outlet property="mainView" destination="WmT-vh-efa" id="wws-i6-F5O"/>
+                <outlet property="tabBar" destination="MJF-MG-mCh" id="xvg-ox-wZ6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,20 +20,26 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WmT-vh-efa">
-                    <rect key="frame" x="107" y="54" width="200" height="100"/>
-                    <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="MJF-MG-mCh">
+                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="100" id="1sM-ta-cLR"/>
-                        <constraint firstAttribute="width" secondItem="WmT-vh-efa" secondAttribute="height" multiplier="2:1" id="e5n-OT-TJ7"/>
+                        <constraint firstAttribute="height" constant="44" id="zGs-dk-P8X"/>
                     </constraints>
-                </view>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ufh-cl-Uej">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="WmT-vh-efa" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="QSL-dk-vkG"/>
-                <constraint firstItem="WmT-vh-efa" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="b0T-jK-Ewt"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="MJF-MG-mCh" secondAttribute="trailing" id="79B-7B-Shj"/>
+                <constraint firstItem="MJF-MG-mCh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="gL6-fi-fG1"/>
+                <constraint firstItem="MJF-MG-mCh" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="kYN-GE-IgQ"/>
             </constraints>
             <point key="canvasLocation" x="139" y="69"/>
         </view>
@@ -41,9 +47,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

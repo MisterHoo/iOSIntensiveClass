@@ -9,28 +9,70 @@ import UIKit
 
 class DrawLayerViewController: UIViewController {
 
+	@IBOutlet weak var tabBar: UICollectionView!
 	
-	@IBOutlet weak var mainView: UIView!
+	private let cellIdentifier: String = "TabBarCollectionCell"
 	
-    override func viewDidLoad() {
+	private var tabCount: Int = 4
+	
+	override func viewDidLoad() {
         super.viewDidLoad()
-		drawTriangleIn(view: mainView)
+		setupCollectionView()
     }
+	
+	private func setupCollectionView() {
+		tabBar.dataSource = self
+		tabBar.delegate = self
+		tabBar.register(UINib(nibName: cellIdentifier, bundle: nil), forCellWithReuseIdentifier: cellIdentifier)
+	}
+	
+	private func selectTab(_ index: Int) {
+		for i in 0..<tabCount {
+			guard let cell = tabBar.cellForItem(at: IndexPath(row: i, section: 0)) as? TabBarCollectionCell else {
+				continue
+			}
+			
+			cell.isTabSelected = i == index
+		}
+	}
+}
 
-	private func drawTriangleIn(view: UIView) {
-		let viewSize = view.frame.size
+extension DrawLayerViewController: UICollectionViewDelegate {
+	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+		selectTab(indexPath.row)
+		collectionView.scrollToItem(at: indexPath, at: .right, animated: true)
+	}
+}
+
+extension DrawLayerViewController: UICollectionViewDataSource {
+	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+		return tabCount
+	}
+	
+	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+		guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as? TabBarCollectionCell else {
+			return UICollectionViewCell()
+		}
 		
-		let path = UIBezierPath()
-		path.move(to: CGPoint(x: 0, y: viewSize.height))
-		path.addQuadCurve(to: CGPoint(x: viewSize.width, y: viewSize.height), controlPoint: CGPoint(x: viewSize.width / 2, y: 0))
-		path.addLine(to: CGPoint(x: 0, y: viewSize.height))
-		path.close()
+		cell.tabNameLabel.text = "Tab \(indexPath.item + 1)"
 		
-		let layer = CAShapeLayer()
-		layer.path = path.cgPath
-		layer.fillColor = UIColor.blue.cgColor
-		layer.frame = CGRect(origin: .zero, size: viewSize)
+		return cell
+	}
+}
+
+extension DrawLayerViewController: UICollectionViewDelegateFlowLayout {
+	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+		let width = collectionView.frame.width * 0.28
+		let height = collectionView.frame.height
 		
-		view.layer.addSublayer(layer)
+		return CGSize(width: width, height: height)
+	}
+	
+	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+		return 0
+	}
+	
+	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+		return 0
 	}
 }

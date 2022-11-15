@@ -13,6 +13,8 @@
 		DB167898291113B300412A72 /* TableBatchUpdatesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB167896291113B300412A72 /* TableBatchUpdatesViewController.xib */; };
 		DB23B7962918F632005502EA /* DrawLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB23B7942918F632005502EA /* DrawLayerViewController.swift */; };
 		DB23B7972918F632005502EA /* DrawLayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB23B7952918F632005502EA /* DrawLayerViewController.xib */; };
+		DB41D700292232AB009F4696 /* TabBarCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB41D6FE292232AB009F4696 /* TabBarCollectionCell.swift */; };
+		DB41D701292232AB009F4696 /* TabBarCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB41D6FF292232AB009F4696 /* TabBarCollectionCell.xib */; };
 		DB65F28A28BDFF3400218041 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB65F28928BDFF3400218041 /* AppDelegate.swift */; };
 		DB65F29328BDFF3700218041 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB65F29228BDFF3700218041 /* Assets.xcassets */; };
 		DB65F29628BDFF3700218041 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB65F29428BDFF3700218041 /* LaunchScreen.storyboard */; };
@@ -61,6 +63,8 @@
 		DB167896291113B300412A72 /* TableBatchUpdatesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableBatchUpdatesViewController.xib; sourceTree = "<group>"; };
 		DB23B7942918F632005502EA /* DrawLayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawLayerViewController.swift; sourceTree = "<group>"; };
 		DB23B7952918F632005502EA /* DrawLayerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrawLayerViewController.xib; sourceTree = "<group>"; };
+		DB41D6FE292232AB009F4696 /* TabBarCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCollectionCell.swift; sourceTree = "<group>"; };
+		DB41D6FF292232AB009F4696 /* TabBarCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBarCollectionCell.xib; sourceTree = "<group>"; };
 		DB65F28628BDFF3400218041 /* IntensiveClass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntensiveClass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB65F28928BDFF3400218041 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB65F29228BDFF3700218041 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -124,10 +128,28 @@
 		DB23B7932918F60F005502EA /* DrawLayer */ = {
 			isa = PBXGroup;
 			children = (
+				DB41D70229223CDB009F4696 /* TicketListView */,
+				DB41D6FD2922328C009F4696 /* TabBarCell */,
 				DB23B7942918F632005502EA /* DrawLayerViewController.swift */,
 				DB23B7952918F632005502EA /* DrawLayerViewController.xib */,
 			);
 			path = DrawLayer;
+			sourceTree = "<group>";
+		};
+		DB41D6FD2922328C009F4696 /* TabBarCell */ = {
+			isa = PBXGroup;
+			children = (
+				DB41D6FE292232AB009F4696 /* TabBarCollectionCell.swift */,
+				DB41D6FF292232AB009F4696 /* TabBarCollectionCell.xib */,
+			);
+			path = TabBarCell;
+			sourceTree = "<group>";
+		};
+		DB41D70229223CDB009F4696 /* TicketListView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TicketListView;
 			sourceTree = "<group>";
 		};
 		DB65F27D28BDFF3400218041 = {
@@ -346,6 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBB7E44928C5C1EA0085CEDA /* ListClassViewController.xib in Resources */,
+				DB41D701292232AB009F4696 /* TabBarCollectionCell.xib in Resources */,
 				DBF8428D28FEB16200891404 /* OTPPageViewController.xib in Resources */,
 				DB6ABA1628BE10A900FB7729 /* LabelAndCounterViewController.xib in Resources */,
 				DBB7E45D28CEE4D10085CEDA /* ChatRoomViewController.xib in Resources */,
@@ -373,6 +396,7 @@
 				DB23B7962918F632005502EA /* DrawLayerViewController.swift in Sources */,
 				DB6ABA1528BE10A900FB7729 /* LabelAndCounterViewController.swift in Sources */,
 				DBF8428F28FEB30500891404 /* OTPTextField.swift in Sources */,
+				DB41D700292232AB009F4696 /* TabBarCollectionCell.swift in Sources */,
 				DBB7E44E28C5C5240085CEDA /* ListComponentViewController.swift in Sources */,
 				DBB7E46128CEEE6A0085CEDA /* ChatRoomTableCell.swift in Sources */,
 				DBA5915228BE1502008F7500 /* ProjectBaseUIView.swift in Sources */,
