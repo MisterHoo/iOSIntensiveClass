@@ -12,9 +12,9 @@ class TabBarCollectionViewCell: UICollectionViewCell {
 	@IBOutlet weak var containerCell: UIView!
 	private var triangleShape: CAShapeLayer!
 	
-	var isShowTriangle: Bool = false {
+	var isHideTriangle: Bool = false {
 		didSet {
-			showTriangleShape(isHidden: isShowTriangle)
+			showTriangleShape(isHidden: isHideTriangle)
 		}
 	}
 	

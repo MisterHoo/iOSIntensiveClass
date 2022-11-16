@@ -69,11 +69,11 @@ extension LayerTabBarViewController: UICollectionViewDataSource {
 
 		if let lastIndexPath = self.lastIndexPath, lastIndexPath != indexPath {
 			let lastCell = collectionView.cellForItem(at: lastIndexPath) as! TabBarCollectionViewCell
-			lastCell.isShowTriangle = true
+			lastCell.isHideTriangle = true
 		}
 		
 		let cell = collectionView.cellForItem(at: indexPath) as! TabBarCollectionViewCell
-		cell.isShowTriangle = false
+		cell.isHideTriangle = false
 		
 		lastIndexPath = indexPath
 		
@@ -117,7 +117,7 @@ extension LayerTabBarViewController {
 		imageLayer.contentsGravity = .resizeAspectFill
 		imageLayer.frame = voucherContainer.bounds
 		
-		imageLayer.mask = ticketShapeLayer
+		voucherContainer.layer.mask = ticketShapeLayer
 		
 		voucherContainer.layer.addSublayer(imageLayer)
 	}
