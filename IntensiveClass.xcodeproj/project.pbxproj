@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08E3A090291BB4B9002E3D1D /* LayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E3A08E291BB4B9002E3D1D /* LayerViewController.swift */; };
+		08E3A091291BB4B9002E3D1D /* LayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08E3A08F291BB4B9002E3D1D /* LayerViewController.xib */; };
+		08E3A099291BB854002E3D1D /* LayerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E3A097291BB854002E3D1D /* LayerCollectionViewCell.swift */; };
+		08E3A09A291BB854002E3D1D /* LayerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08E3A098291BB854002E3D1D /* LayerCollectionViewCell.xib */; };
 		DB06175A28E448D600C35ADD /* InputFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB06175828E448D600C35ADD /* InputFormViewController.swift */; };
 		DB06175B28E448D600C35ADD /* InputFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB06175928E448D600C35ADD /* InputFormViewController.xib */; };
 		DB167897291113B300412A72 /* TableBatchUpdatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB167895291113B300412A72 /* TableBatchUpdatesViewController.swift */; };
@@ -53,6 +57,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		08E3A08E291BB4B9002E3D1D /* LayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerViewController.swift; sourceTree = "<group>"; };
+		08E3A08F291BB4B9002E3D1D /* LayerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LayerViewController.xib; sourceTree = "<group>"; };
+		08E3A097291BB854002E3D1D /* LayerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerCollectionViewCell.swift; sourceTree = "<group>"; };
+		08E3A098291BB854002E3D1D /* LayerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LayerCollectionViewCell.xib; sourceTree = "<group>"; };
 		DB06175828E448D600C35ADD /* InputFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFormViewController.swift; sourceTree = "<group>"; };
 		DB06175928E448D600C35ADD /* InputFormViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputFormViewController.xib; sourceTree = "<group>"; };
 		DB167895291113B300412A72 /* TableBatchUpdatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableBatchUpdatesViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +106,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08E3A08D291BB482002E3D1D /* Layer */ = {
+			isa = PBXGroup;
+			children = (
+				08E3A092291BB7E8002E3D1D /* CollectionViewLayer */,
+				08E3A08E291BB4B9002E3D1D /* LayerViewController.swift */,
+				08E3A08F291BB4B9002E3D1D /* LayerViewController.xib */,
+			);
+			path = Layer;
+			sourceTree = "<group>";
+		};
+		08E3A092291BB7E8002E3D1D /* CollectionViewLayer */ = {
+			isa = PBXGroup;
+			children = (
+				08E3A097291BB854002E3D1D /* LayerCollectionViewCell.swift */,
+				08E3A098291BB854002E3D1D /* LayerCollectionViewCell.xib */,
+			);
+			path = CollectionViewLayer;
+			sourceTree = "<group>";
+		};
 		DB06175728E448B800C35ADD /* InputForm */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +177,7 @@
 		DB65F29D28BE000600218041 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				08E3A08D291BB482002E3D1D /* Layer */,
 				DB1678942911137800412A72 /* TableBatchUpdates */,
 				DBF8429829000A0500891404 /* SearchBar */,
 				DB06175728E448B800C35ADD /* InputForm */,
@@ -331,6 +359,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08E3A09A291BB854002E3D1D /* LayerCollectionViewCell.xib in Resources */,
 				DBB7E44928C5C1EA0085CEDA /* ListClassViewController.xib in Resources */,
 				DBF8428D28FEB16200891404 /* OTPPageViewController.xib in Resources */,
 				DB6ABA1628BE10A900FB7729 /* LabelAndCounterViewController.xib in Resources */,
@@ -342,6 +371,7 @@
 				DB65F29628BDFF3700218041 /* LaunchScreen.storyboard in Resources */,
 				DB65F29328BDFF3700218041 /* Assets.xcassets in Resources */,
 				DBB7E45828C5C8D50085CEDA /* PhotoCollectionCell.xib in Resources */,
+				08E3A091291BB4B9002E3D1D /* LayerViewController.xib in Resources */,
 				DBB7E45328C5C5610085CEDA /* ListCommentTableCell.xib in Resources */,
 				DBF8429C29000A4600891404 /* SearchBarViewController.xib in Resources */,
 				DBB7E46228CEEE6A0085CEDA /* ChatRoomTableCell.xib in Resources */,
@@ -356,10 +386,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB6ABA1528BE10A900FB7729 /* LabelAndCounterViewController.swift in Sources */,
+				08E3A090291BB4B9002E3D1D /* LayerViewController.swift in Sources */,
 				DBF8428F28FEB30500891404 /* OTPTextField.swift in Sources */,
 				DBB7E44E28C5C5240085CEDA /* ListComponentViewController.swift in Sources */,
 				DBB7E46128CEEE6A0085CEDA /* ChatRoomTableCell.swift in Sources */,
 				DBA5915228BE1502008F7500 /* ProjectBaseUIView.swift in Sources */,
+				08E3A099291BB854002E3D1D /* LayerCollectionViewCell.swift in Sources */,
 				DBB7E45728C5C8D50085CEDA /* PhotoCollectionCell.swift in Sources */,
 				DB65F28A28BDFF3400218041 /* AppDelegate.swift in Sources */,
 				DBB7E45228C5C5610085CEDA /* ListCommentTableCell.swift in Sources */,
