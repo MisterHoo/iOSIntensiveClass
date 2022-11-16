@@ -114,6 +114,7 @@ extension LayerTabBarViewController {
 		let myImage = UIImage(named: "banner.jpeg")?.cgImage
 		let imageLayer = CAShapeLayer()
 		imageLayer.contents = myImage
+		imageLayer.contentsGravity = .resizeAspectFill
 		imageLayer.frame = voucherContainer.bounds
 		
 		imageLayer.mask = ticketShapeLayer
