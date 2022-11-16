@@ -15,6 +15,10 @@
 		DB23B7972918F632005502EA /* DrawLayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB23B7952918F632005502EA /* DrawLayerViewController.xib */; };
 		DB41D700292232AB009F4696 /* TabBarCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB41D6FE292232AB009F4696 /* TabBarCollectionCell.swift */; };
 		DB41D701292232AB009F4696 /* TabBarCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB41D6FF292232AB009F4696 /* TabBarCollectionCell.xib */; };
+		DB41D7052923880B009F4696 /* TicketListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB41D7032923880B009F4696 /* TicketListView.swift */; };
+		DB41D7062923880B009F4696 /* TicketListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB41D7042923880B009F4696 /* TicketListView.xib */; };
+		DB41D70A2923885C009F4696 /* TicketListTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB41D7082923885C009F4696 /* TicketListTableCell.swift */; };
+		DB41D70B2923885C009F4696 /* TicketListTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB41D7092923885C009F4696 /* TicketListTableCell.xib */; };
 		DB65F28A28BDFF3400218041 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB65F28928BDFF3400218041 /* AppDelegate.swift */; };
 		DB65F29328BDFF3700218041 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB65F29228BDFF3700218041 /* Assets.xcassets */; };
 		DB65F29628BDFF3700218041 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB65F29428BDFF3700218041 /* LaunchScreen.storyboard */; };
@@ -65,6 +69,10 @@
 		DB23B7952918F632005502EA /* DrawLayerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrawLayerViewController.xib; sourceTree = "<group>"; };
 		DB41D6FE292232AB009F4696 /* TabBarCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCollectionCell.swift; sourceTree = "<group>"; };
 		DB41D6FF292232AB009F4696 /* TabBarCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBarCollectionCell.xib; sourceTree = "<group>"; };
+		DB41D7032923880B009F4696 /* TicketListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketListView.swift; sourceTree = "<group>"; };
+		DB41D7042923880B009F4696 /* TicketListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TicketListView.xib; sourceTree = "<group>"; };
+		DB41D7082923885C009F4696 /* TicketListTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketListTableCell.swift; sourceTree = "<group>"; };
+		DB41D7092923885C009F4696 /* TicketListTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TicketListTableCell.xib; sourceTree = "<group>"; };
 		DB65F28628BDFF3400218041 /* IntensiveClass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntensiveClass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB65F28928BDFF3400218041 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB65F29228BDFF3700218041 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -148,8 +156,20 @@
 		DB41D70229223CDB009F4696 /* TicketListView */ = {
 			isa = PBXGroup;
 			children = (
+				DB41D70729238848009F4696 /* Cell */,
+				DB41D7032923880B009F4696 /* TicketListView.swift */,
+				DB41D7042923880B009F4696 /* TicketListView.xib */,
 			);
 			path = TicketListView;
+			sourceTree = "<group>";
+		};
+		DB41D70729238848009F4696 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DB41D7082923885C009F4696 /* TicketListTableCell.swift */,
+				DB41D7092923885C009F4696 /* TicketListTableCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		DB65F27D28BDFF3400218041 = {
@@ -379,9 +399,11 @@
 				DB23B7972918F632005502EA /* DrawLayerViewController.xib in Resources */,
 				DB65F29628BDFF3700218041 /* LaunchScreen.storyboard in Resources */,
 				DB65F29328BDFF3700218041 /* Assets.xcassets in Resources */,
+				DB41D70B2923885C009F4696 /* TicketListTableCell.xib in Resources */,
 				DBB7E45828C5C8D50085CEDA /* PhotoCollectionCell.xib in Resources */,
 				DBB7E45328C5C5610085CEDA /* ListCommentTableCell.xib in Resources */,
 				DBF8429C29000A4600891404 /* SearchBarViewController.xib in Resources */,
+				DB41D7062923880B009F4696 /* TicketListView.xib in Resources */,
 				DBB7E46228CEEE6A0085CEDA /* ChatRoomTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,6 +422,7 @@
 				DBB7E44E28C5C5240085CEDA /* ListComponentViewController.swift in Sources */,
 				DBB7E46128CEEE6A0085CEDA /* ChatRoomTableCell.swift in Sources */,
 				DBA5915228BE1502008F7500 /* ProjectBaseUIView.swift in Sources */,
+				DB41D7052923880B009F4696 /* TicketListView.swift in Sources */,
 				DBB7E45728C5C8D50085CEDA /* PhotoCollectionCell.swift in Sources */,
 				DB65F28A28BDFF3400218041 /* AppDelegate.swift in Sources */,
 				DBB7E45228C5C5610085CEDA /* ListCommentTableCell.swift in Sources */,
@@ -408,6 +431,7 @@
 				DB6ABA1028BE105C00FB7729 /* UIView.swift in Sources */,
 				DBF8429B29000A4600891404 /* SearchBarViewController.swift in Sources */,
 				DBB7E45C28CEE4D10085CEDA /* ChatRoomViewController.swift in Sources */,
+				DB41D70A2923885C009F4696 /* TicketListTableCell.swift in Sources */,
 				DB65F2A128BE006200218041 /* LandingPageViewController.swift in Sources */,
 				DBB7E44828C5C1EA0085CEDA /* ListClassViewController.swift in Sources */,
 				DB167897291113B300412A72 /* TableBatchUpdatesViewController.swift in Sources */,

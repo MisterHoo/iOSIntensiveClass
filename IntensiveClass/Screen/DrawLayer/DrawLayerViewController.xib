@@ -11,6 +11,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DrawLayerViewController" customModule="IntensiveClass" customModuleProvider="target">
             <connections>
+                <outlet property="pageView1" destination="ICQ-h5-cwe" id="AH3-cs-CCy"/>
+                <outlet property="pageView2" destination="tKC-bj-64V" id="NQc-NQ-h3w"/>
+                <outlet property="pageView3" destination="UYj-I8-sHf" id="aCE-9m-kPV"/>
+                <outlet property="pageView4" destination="taz-7p-8FN" id="k6g-nI-8Dn"/>
+                <outlet property="scrollView" destination="o2o-O7-6rQ" id="IZf-Es-hdQ"/>
                 <outlet property="tabBar" destination="MJF-MG-mCh" id="xvg-ox-wZ6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -33,13 +38,68 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o2o-O7-6rQ">
+                    <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BxN-bM-KIA">
+                            <rect key="frame" x="0.0" y="0.0" width="1656" height="774"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YcU-F9-0Ig">
+                                    <rect key="frame" x="0.0" y="0.0" width="1656" height="774"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ICQ-h5-cwe" customClass="TicketListView" customModule="IntensiveClass" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tKC-bj-64V" customClass="TicketListView" customModule="IntensiveClass" customModuleProvider="target">
+                                            <rect key="frame" x="414" y="0.0" width="414" height="774"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UYj-I8-sHf" customClass="TicketListView" customModule="IntensiveClass" customModuleProvider="target">
+                                            <rect key="frame" x="828" y="0.0" width="414" height="774"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="taz-7p-8FN" customClass="TicketListView" customModule="IntensiveClass" customModuleProvider="target">
+                                            <rect key="frame" x="1242" y="0.0" width="414" height="774"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="taz-7p-8FN" firstAttribute="width" secondItem="ICQ-h5-cwe" secondAttribute="width" id="Gyv-9H-8Su"/>
+                                        <constraint firstItem="UYj-I8-sHf" firstAttribute="width" secondItem="ICQ-h5-cwe" secondAttribute="width" id="Onm-LS-B9U"/>
+                                        <constraint firstItem="tKC-bj-64V" firstAttribute="width" secondItem="ICQ-h5-cwe" secondAttribute="width" id="W2h-ua-BL0"/>
+                                    </constraints>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="YcU-F9-0Ig" firstAttribute="leading" secondItem="BxN-bM-KIA" secondAttribute="leading" id="NLr-ND-OtS"/>
+                                <constraint firstAttribute="trailing" secondItem="YcU-F9-0Ig" secondAttribute="trailing" id="VpJ-22-fcn"/>
+                                <constraint firstItem="YcU-F9-0Ig" firstAttribute="top" secondItem="BxN-bM-KIA" secondAttribute="top" id="g9V-6V-LpG"/>
+                                <constraint firstAttribute="bottom" secondItem="YcU-F9-0Ig" secondAttribute="bottom" id="s0E-7G-Ald"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="ICQ-h5-cwe" firstAttribute="width" secondItem="o2o-O7-6rQ" secondAttribute="width" id="YYN-ne-OeW"/>
+                        <constraint firstItem="BxN-bM-KIA" firstAttribute="height" secondItem="o2o-O7-6rQ" secondAttribute="height" id="ZNr-oR-O05"/>
+                        <constraint firstItem="BxN-bM-KIA" firstAttribute="leading" secondItem="o2o-O7-6rQ" secondAttribute="leading" id="ba1-yT-Tb8"/>
+                        <constraint firstAttribute="bottom" secondItem="BxN-bM-KIA" secondAttribute="bottom" id="ksz-f9-MKC"/>
+                        <constraint firstAttribute="trailing" secondItem="BxN-bM-KIA" secondAttribute="trailing" id="mGT-le-3cy"/>
+                        <constraint firstItem="BxN-bM-KIA" firstAttribute="top" secondItem="o2o-O7-6rQ" secondAttribute="top" id="my9-Zg-2W6"/>
+                    </constraints>
+                </scrollView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="MJF-MG-mCh" secondAttribute="trailing" id="79B-7B-Shj"/>
+                <constraint firstItem="o2o-O7-6rQ" firstAttribute="top" secondItem="MJF-MG-mCh" secondAttribute="bottom" id="9yM-sT-SnT"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="o2o-O7-6rQ" secondAttribute="trailing" id="CyB-kk-VeS"/>
                 <constraint firstItem="MJF-MG-mCh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="gL6-fi-fG1"/>
                 <constraint firstItem="MJF-MG-mCh" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="kYN-GE-IgQ"/>
+                <constraint firstItem="o2o-O7-6rQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="pQ4-BJ-vNC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="o2o-O7-6rQ" secondAttribute="bottom" id="utD-nJ-zj6"/>
             </constraints>
             <point key="canvasLocation" x="139" y="69"/>
         </view>

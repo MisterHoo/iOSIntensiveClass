@@ -10,6 +10,12 @@ import UIKit
 class DrawLayerViewController: UIViewController {
 
 	@IBOutlet weak var tabBar: UICollectionView!
+	@IBOutlet weak var scrollView: UIScrollView!
+	
+	@IBOutlet weak var pageView1: TicketListView!
+	@IBOutlet weak var pageView2: TicketListView!
+	@IBOutlet weak var pageView3: TicketListView!
+	@IBOutlet weak var pageView4: TicketListView!
 	
 	private let cellIdentifier: String = "TabBarCollectionCell"
 	
@@ -18,12 +24,23 @@ class DrawLayerViewController: UIViewController {
 	override func viewDidLoad() {
         super.viewDidLoad()
 		setupCollectionView()
+		setupScrollView()
     }
 	
 	private func setupCollectionView() {
 		tabBar.dataSource = self
 		tabBar.delegate = self
 		tabBar.register(UINib(nibName: cellIdentifier, bundle: nil), forCellWithReuseIdentifier: cellIdentifier)
+		tabBar.showsHorizontalScrollIndicator = false
+	}
+
+	private func setupScrollView() {
+		scrollView.isScrollEnabled = false
+		scrollView.showsHorizontalScrollIndicator = false
+	}
+	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
 	}
 	
 	private func selectTab(_ index: Int) {
@@ -34,6 +51,10 @@ class DrawLayerViewController: UIViewController {
 			
 			cell.isTabSelected = i == index
 		}
+		
+		let xOffset = scrollView.frame.width * CGFloat(index)
+		let offset = CGPoint(x: xOffset, y: scrollView.contentOffset.y)
+		scrollView.setContentOffset(offset, animated: true)
 	}
 }
 
