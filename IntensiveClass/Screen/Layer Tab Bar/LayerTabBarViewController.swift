@@ -87,7 +87,6 @@ extension LayerTabBarViewController {
 		//bikin shape layer sebesar voucher container
 		let ticketShapeLayer = CAShapeLayer()
 		ticketShapeLayer.frame = voucherContainer.bounds
-		ticketShapeLayer.fillColor = UIColor.red.cgColor
 		
 		//bikin garis berbentuk kotak (path) sebesar ticketShapeLayer dan cornerRadius yang sama
 		let ticketShapePath = UIBezierPath(roundedRect: ticketShapeLayer.bounds, cornerRadius: 18)
@@ -111,8 +110,15 @@ extension LayerTabBarViewController {
 		ticketShapePath.append(leftHalfCircle)
 		ticketShapePath.append(rightHalfCircle)
 		ticketShapeLayer.path = ticketShapePath.cgPath
-
-		voucherContainer.layer.addSublayer(ticketShapeLayer)
+		
+		let myImage = UIImage(named: "banner.jpeg")?.cgImage
+		let imageLayer = CAShapeLayer()
+		imageLayer.contents = myImage
+		imageLayer.frame = voucherContainer.bounds
+		
+		imageLayer.mask = ticketShapeLayer
+		
+		voucherContainer.layer.addSublayer(imageLayer)
 	}
 }
 
