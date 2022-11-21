@@ -40,6 +40,14 @@
 		DBB7E45D28CEE4D10085CEDA /* ChatRoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBB7E45B28CEE4D10085CEDA /* ChatRoomViewController.xib */; };
 		DBB7E46128CEEE6A0085CEDA /* ChatRoomTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB7E45F28CEEE6A0085CEDA /* ChatRoomTableCell.swift */; };
 		DBB7E46228CEEE6A0085CEDA /* ChatRoomTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBB7E46028CEEE6A0085CEDA /* ChatRoomTableCell.xib */; };
+		DBCD06C9292B713F0045988B /* TableSectionAdapterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCD06C7292B713F0045988B /* TableSectionAdapterViewController.swift */; };
+		DBCD06CA292B713F0045988B /* TableSectionAdapterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBCD06C8292B713F0045988B /* TableSectionAdapterViewController.xib */; };
+		DBCD06CC292B71DB0045988B /* TableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCD06CB292B71DA0045988B /* TableAdapter.swift */; };
+		DBCD06CE292B724F0045988B /* TableSectionAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCD06CD292B724F0045988B /* TableSectionAdapter.swift */; };
+		DBCD06D2292B73C40045988B /* HeaderSectionAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCD06D1292B73C40045988B /* HeaderSectionAdapter.swift */; };
+		DBCD06D4292B74B60045988B /* ContentSectionAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCD06D3292B74B60045988B /* ContentSectionAdapter.swift */; };
+		DBCD06D8292B77A80045988B /* ContentSectionAdapterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCD06D6292B77A80045988B /* ContentSectionAdapterCell.swift */; };
+		DBCD06D9292B77A80045988B /* ContentSectionAdapterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBCD06D7292B77A80045988B /* ContentSectionAdapterCell.xib */; };
 		DBF8428C28FEB16200891404 /* OTPPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF8428A28FEB16200891404 /* OTPPageViewController.swift */; };
 		DBF8428D28FEB16200891404 /* OTPPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBF8428B28FEB16200891404 /* OTPPageViewController.xib */; };
 		DBF8428F28FEB30500891404 /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF8428E28FEB30500891404 /* OTPTextField.swift */; };
@@ -96,6 +104,14 @@
 		DBB7E45B28CEE4D10085CEDA /* ChatRoomViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatRoomViewController.xib; sourceTree = "<group>"; };
 		DBB7E45F28CEEE6A0085CEDA /* ChatRoomTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomTableCell.swift; sourceTree = "<group>"; };
 		DBB7E46028CEEE6A0085CEDA /* ChatRoomTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatRoomTableCell.xib; sourceTree = "<group>"; };
+		DBCD06C7292B713F0045988B /* TableSectionAdapterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSectionAdapterViewController.swift; sourceTree = "<group>"; };
+		DBCD06C8292B713F0045988B /* TableSectionAdapterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableSectionAdapterViewController.xib; sourceTree = "<group>"; };
+		DBCD06CB292B71DA0045988B /* TableAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableAdapter.swift; sourceTree = "<group>"; };
+		DBCD06CD292B724F0045988B /* TableSectionAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSectionAdapter.swift; sourceTree = "<group>"; };
+		DBCD06D1292B73C40045988B /* HeaderSectionAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderSectionAdapter.swift; sourceTree = "<group>"; };
+		DBCD06D3292B74B60045988B /* ContentSectionAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentSectionAdapter.swift; sourceTree = "<group>"; };
+		DBCD06D6292B77A80045988B /* ContentSectionAdapterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentSectionAdapterCell.swift; sourceTree = "<group>"; };
+		DBCD06D7292B77A80045988B /* ContentSectionAdapterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentSectionAdapterCell.xib; sourceTree = "<group>"; };
 		DBF8428A28FEB16200891404 /* OTPPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPPageViewController.swift; sourceTree = "<group>"; };
 		DBF8428B28FEB16200891404 /* OTPPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OTPPageViewController.xib; sourceTree = "<group>"; };
 		DBF8428E28FEB30500891404 /* OTPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextField.swift; sourceTree = "<group>"; };
@@ -205,6 +221,7 @@
 		DB65F29D28BE000600218041 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				DBCD06C5292B70F50045988B /* TableSectionAdapter */,
 				DB23B7932918F60F005502EA /* DrawLayer */,
 				DB1678942911137800412A72 /* TableBatchUpdates */,
 				DBF8429829000A0500891404 /* SearchBar */,
@@ -310,6 +327,45 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		DBCD06C5292B70F50045988B /* TableSectionAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				DBCD06CF292B73B00045988B /* SectionAdapter */,
+				DBCD06C7292B713F0045988B /* TableSectionAdapterViewController.swift */,
+				DBCD06C8292B713F0045988B /* TableSectionAdapterViewController.xib */,
+				DBCD06CB292B71DA0045988B /* TableAdapter.swift */,
+				DBCD06CD292B724F0045988B /* TableSectionAdapter.swift */,
+			);
+			path = TableSectionAdapter;
+			sourceTree = "<group>";
+		};
+		DBCD06CF292B73B00045988B /* SectionAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				DBCD06D5292B77910045988B /* Content */,
+				DBCD06D0292B73B70045988B /* Header */,
+			);
+			path = SectionAdapter;
+			sourceTree = "<group>";
+		};
+		DBCD06D0292B73B70045988B /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				DBCD06D1292B73C40045988B /* HeaderSectionAdapter.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		DBCD06D5292B77910045988B /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				DBCD06D3292B74B60045988B /* ContentSectionAdapter.swift */,
+				DBCD06D6292B77A80045988B /* ContentSectionAdapterCell.swift */,
+				DBCD06D7292B77A80045988B /* ContentSectionAdapterCell.xib */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
 		DBF8428928FEB14900891404 /* OTPPage */ = {
 			isa = PBXGroup;
 			children = (
@@ -401,6 +457,8 @@
 				DB65F29328BDFF3700218041 /* Assets.xcassets in Resources */,
 				DB41D70B2923885C009F4696 /* TicketListTableCell.xib in Resources */,
 				DBB7E45828C5C8D50085CEDA /* PhotoCollectionCell.xib in Resources */,
+				DBCD06CA292B713F0045988B /* TableSectionAdapterViewController.xib in Resources */,
+				DBCD06D9292B77A80045988B /* ContentSectionAdapterCell.xib in Resources */,
 				DBB7E45328C5C5610085CEDA /* ListCommentTableCell.xib in Resources */,
 				DBF8429C29000A4600891404 /* SearchBarViewController.xib in Resources */,
 				DB41D7062923880B009F4696 /* TicketListView.xib in Resources */,
@@ -419,15 +477,21 @@
 				DB6ABA1528BE10A900FB7729 /* LabelAndCounterViewController.swift in Sources */,
 				DBF8428F28FEB30500891404 /* OTPTextField.swift in Sources */,
 				DB41D700292232AB009F4696 /* TabBarCollectionCell.swift in Sources */,
+				DBCD06CE292B724F0045988B /* TableSectionAdapter.swift in Sources */,
+				DBCD06C9292B713F0045988B /* TableSectionAdapterViewController.swift in Sources */,
 				DBB7E44E28C5C5240085CEDA /* ListComponentViewController.swift in Sources */,
 				DBB7E46128CEEE6A0085CEDA /* ChatRoomTableCell.swift in Sources */,
 				DBA5915228BE1502008F7500 /* ProjectBaseUIView.swift in Sources */,
 				DB41D7052923880B009F4696 /* TicketListView.swift in Sources */,
 				DBB7E45728C5C8D50085CEDA /* PhotoCollectionCell.swift in Sources */,
 				DB65F28A28BDFF3400218041 /* AppDelegate.swift in Sources */,
+				DBCD06D4292B74B60045988B /* ContentSectionAdapter.swift in Sources */,
+				DBCD06D2292B73C40045988B /* HeaderSectionAdapter.swift in Sources */,
 				DBB7E45228C5C5610085CEDA /* ListCommentTableCell.swift in Sources */,
+				DBCD06D8292B77A80045988B /* ContentSectionAdapterCell.swift in Sources */,
 				DB06175A28E448D600C35ADD /* InputFormViewController.swift in Sources */,
 				DBF8428C28FEB16200891404 /* OTPPageViewController.swift in Sources */,
+				DBCD06CC292B71DB0045988B /* TableAdapter.swift in Sources */,
 				DB6ABA1028BE105C00FB7729 /* UIView.swift in Sources */,
 				DBF8429B29000A4600891404 /* SearchBarViewController.swift in Sources */,
 				DBB7E45C28CEE4D10085CEDA /* ChatRoomViewController.swift in Sources */,
